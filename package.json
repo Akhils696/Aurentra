@@ -15,7 +15,7 @@
   "keywords": [],
   "author": "",
   "license": "UNLICENSED",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/Akhils696/Aurentra/issues"
   },

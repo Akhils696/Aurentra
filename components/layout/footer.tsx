@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Linkedin, Mail, Twitter } from "lucide-react";
+import { AtSign, Mail, MessageCircle } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { navItems, services } from "@/lib/site-data";
 
@@ -14,7 +14,7 @@ export function Footer() {
               AI automation, web platforms, mobile apps, and transformation systems for ambitious businesses.
             </p>
             <div className="mt-6 flex gap-3">
-              {[Linkedin, Twitter, Mail].map((Icon, index) => (
+              {[AtSign, MessageCircle, Mail].map((Icon, index) => (
                 <Link
                   key={index}
                   href={index === 2 ? "mailto:hello@aurentra.com" : "#"}
