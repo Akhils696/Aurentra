@@ -1,9 +1,15 @@
 import Link from "next/link";
-import { AtSign, Mail, MessageCircle } from "lucide-react";
+import { AtSign, Mail, MapPin } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { navItems, services } from "@/lib/site-data";
 
 export function Footer() {
+  const socialLinks = [
+    { href: "https://www.instagram.com/aurentratechnologies", label: "Instagram", icon: AtSign },
+    { href: "mailto:aurentratechnologies@gmail.com", label: "Email", icon: Mail },
+    { href: "/contact", label: "Location", icon: MapPin },
+  ];
+
   return (
     <footer className="border-t border-white/8 bg-black/25 py-12">
       <Container>
@@ -14,11 +20,11 @@ export function Footer() {
               AI automation, web platforms, mobile apps, and transformation systems for ambitious businesses.
             </p>
             <div className="mt-6 flex gap-3">
-              {[AtSign, MessageCircle, Mail].map((Icon, index) => (
+              {socialLinks.map(({ href, label, icon: Icon }) => (
                 <Link
-                  key={index}
-                  href={index === 2 ? "mailto:aurentratechnologies@gmail.com" : "#"}
-                  aria-label="Aurentra social link"
+                  key={label}
+                  href={href}
+                  aria-label={`Aurentra ${label}`}
                   className="flex size-10 items-center justify-center rounded-md border border-white/12 text-white/65 transition hover:border-aurora/60 hover:text-white"
                 >
                   <Icon aria-hidden className="size-5" />
@@ -49,7 +55,7 @@ export function Footer() {
         </div>
         <div className="mt-10 flex flex-col gap-3 border-t border-white/8 pt-6 text-sm text-white/45 sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 Aurentra Technologies. All rights reserved.</p>
-          <p>Coimbatore, Tamil Nadu · Built for secure, scalable digital growth.</p>
+          <p>Amritanagar, Ettimadai, Tamil Nadu · Built for secure, scalable digital growth.</p>
         </div>
       </Container>
     </footer>

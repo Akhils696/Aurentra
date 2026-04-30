@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { AtSign, Mail, MapPin, Phone } from "lucide-react";
 import { ContactForm } from "@/components/contact/contact-form";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -12,7 +12,8 @@ export const metadata: Metadata = {
 const details = [
   { label: "Email", value: "aurentratechnologies@gmail.com", icon: Mail },
   { label: "Phone", value: "Available on request", icon: Phone },
-  { label: "Location", value: "Coimbatore, Tamil Nadu, India", icon: MapPin },
+  { label: "Location", value: "Amrita University, Amritanagar, Ettimadai, Tamil Nadu 641112, India", icon: MapPin },
+  { label: "Instagram", value: "@aurentratechnologies", icon: AtSign },
 ];
 
 export default function ContactPage() {
@@ -53,8 +54,8 @@ export default function ContactPage() {
                 </div>
               ))}
               <div className="min-h-56 rounded-lg border border-white/8 bg-[linear-gradient(135deg,rgba(239,68,68,0.14),rgba(255,255,255,0.04)),repeating-linear-gradient(45deg,rgba(255,255,255,0.04)_0,rgba(255,255,255,0.04)_1px,transparent_1px,transparent_16px)] p-6">
-                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-aurora">Map Placeholder</p>
-                <p className="mt-4 max-w-sm leading-7 text-white/62">Embed Google Maps or another provider here when the final office location is confirmed.</p>
+                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-aurora">Location</p>
+                <p className="mt-4 max-w-sm leading-7 text-white/62">Amrita University, Amritanagar, Ettimadai, Tamil Nadu 641112, India</p>
               </div>
             </aside>
           </div>
