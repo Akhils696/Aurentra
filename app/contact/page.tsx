@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Mail, MapPin, Phone, Send } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Mail, MapPin, Phone } from "lucide-react";
+import { ContactForm } from "@/components/contact/contact-form";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 
@@ -35,25 +35,7 @@ export default function ContactPage() {
       <section className="pb-24">
         <Container>
           <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-            <form action="/api/contact" method="post" className="glass grid gap-5 rounded-lg p-6 sm:p-8" aria-label="Contact form">
-              <div className="grid gap-5 sm:grid-cols-2">
-                <label className="grid gap-2 text-sm font-medium text-white/72">
-                  Name
-                  <input name="name" required className="rounded-md border border-white/10 bg-black/22 px-4 py-3 text-white outline-none ring-aurora/40 placeholder:text-white/35 focus:ring-2" placeholder="Your name" />
-                </label>
-                <label className="grid gap-2 text-sm font-medium text-white/72">
-                  Email
-                  <input name="email" type="email" required className="rounded-md border border-white/10 bg-black/22 px-4 py-3 text-white outline-none ring-aurora/40 placeholder:text-white/35 focus:ring-2" placeholder="you@company.com" />
-                </label>
-              </div>
-              <label className="grid gap-2 text-sm font-medium text-white/72">
-                Message
-                <textarea name="message" required className="min-h-44 rounded-md border border-white/10 bg-black/22 px-4 py-3 text-white outline-none ring-aurora/40 placeholder:text-white/35 focus:ring-2" placeholder="Tell us what you want to build" />
-              </label>
-              <Button type="submit">
-                Send Message <Send aria-hidden className="ml-2 size-4" />
-              </Button>
-            </form>
+            <ContactForm />
 
             <aside className="grid gap-5">
               <div className="rounded-lg border border-white/8 bg-white/[0.035] p-6">
