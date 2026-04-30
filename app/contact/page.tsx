@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 };
 
 const details = [
-  { label: "Email", value: "hello@aurentra.com", icon: Mail },
-  { label: "Phone", value: "+91 98765 43210", icon: Phone },
-  { label: "Location", value: "India · Serving global clients", icon: MapPin },
+  { label: "Email", value: "aurentratechnologies@gmail.com", icon: Mail },
+  { label: "Phone", value: "Available on request", icon: Phone },
+  { label: "Location", value: "Coimbatore, Tamil Nadu, India", icon: MapPin },
 ];
 
 export default function ContactPage() {

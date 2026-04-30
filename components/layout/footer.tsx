@@ -17,7 +17,7 @@ export function Footer() {
               {[AtSign, MessageCircle, Mail].map((Icon, index) => (
                 <Link
                   key={index}
-                  href={index === 2 ? "mailto:hello@aurentra.com" : "#"}
+                  href={index === 2 ? "mailto:aurentratechnologies@gmail.com" : "#"}
                   aria-label="Aurentra social link"
                   className="flex size-10 items-center justify-center rounded-md border border-white/12 text-white/65 transition hover:border-aurora/60 hover:text-white"
                 >
@@ -49,7 +49,7 @@ export function Footer() {
         </div>
         <div className="mt-10 flex flex-col gap-3 border-t border-white/8 pt-6 text-sm text-white/45 sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 Aurentra Technologies. All rights reserved.</p>
-          <p>Built for secure, scalable digital growth.</p>
+          <p>Coimbatore, Tamil Nadu · Built for secure, scalable digital growth.</p>
         </div>
       </Container>
     </footer>

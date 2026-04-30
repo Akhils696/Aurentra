@@ -16,7 +16,7 @@ export async function POST(request: Request) {
     name,
     email,
     message,
-    to: process.env.CONTACT_TO_EMAIL ?? "hello@aurentra.com",
+    to: process.env.CONTACT_TO_EMAIL ?? "aurentratechnologies@gmail.com",
     receivedAt: new Date().toISOString(),
   };
 

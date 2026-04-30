@@ -1,15 +1,4 @@
-import {
-  Bot,
-  BriefcaseBusiness,
-  Code2,
-  LineChart,
-  Rocket,
-  ShieldCheck,
-  Smartphone,
-  Sparkles,
-  Users,
-  Workflow,
-} from "lucide-react";
+import { Bot, BriefcaseBusiness, Code2, Crown, LineChart, Rocket, ShieldCheck, Smartphone, Workflow } from "lucide-react";
 
 export const navItems = [
   { href: "/", label: "Home" },
@@ -89,7 +78,7 @@ export const jobs = [
 ];
 
 export const team = [
-  { name: "Aarav Sen", role: "Founder & AI Strategist", icon: Sparkles },
-  { name: "Maya Iyer", role: "Product Design Lead", icon: Users },
-  { name: "Kabir Malhotra", role: "Full-Stack Architect", icon: Code2 },
+  { name: "Akhil S", role: "CEO & Co-Founder", icon: Crown },
+  { name: "Subash Chandra Bose G S", role: "Co-Founder", icon: BriefcaseBusiness },
+  { name: "Aurentra Delivery Team", role: "AI, Web, Mobile & Growth Specialists", icon: Code2 },
 ];
