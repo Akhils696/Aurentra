@@ -62,8 +62,40 @@ body {
   }
 }
 
+.motion-button svg:last-child {
+  transition: transform 220ms ease-in-out;
+}
+
+.motion-button:hover svg:last-child {
+  transform: translateX(3px);
+}
+
+@keyframes ripple {
+  from {
+    opacity: 0.45;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2.4);
+  }
+}
+
+.animate-ripple {
+  animation: ripple 620ms ease-out forwards;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .shimmer-text {
+    animation: none;
+  }
+
+  .motion-button,
+  .motion-button svg:last-child {
+    transition: none;
+  }
+
+  .animate-ripple {
     animation: none;
   }
 }
