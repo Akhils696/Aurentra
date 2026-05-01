@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { BackgroundMotion } from "@/components/layout/background-motion";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { PageTransition } from "@/components/layout/page-transition";
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body className={`${inter.variable} font-sans antialiased`}>
+        <BackgroundMotion />
         <Navbar />
         <PageTransition>{children}</PageTransition>
         <Footer />

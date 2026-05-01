@@ -16,12 +16,29 @@ html {
 }
 
 body {
+  position: relative;
   min-height: 100vh;
+  overflow-x: hidden;
   background:
     radial-gradient(circle at top left, rgba(239, 68, 68, 0.16), transparent 34rem),
     radial-gradient(circle at bottom right, rgba(249, 115, 22, 0.12), transparent 30rem),
     #0b0d12;
   color: #f7f8fb;
+}
+
+.ambient-mesh {
+  background:
+    linear-gradient(115deg, rgba(239, 68, 68, 0.1), transparent 32%, rgba(249, 115, 22, 0.08) 54%, transparent 76%),
+    linear-gradient(35deg, transparent 0%, rgba(255, 255, 255, 0.035) 42%, transparent 70%);
+  background-size: 220% 220%;
+}
+
+.ambient-noise {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(to bottom, transparent, black 18%, black 78%, transparent);
 }
 
 ::selection {
