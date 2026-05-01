@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { AnimatedSection } from "@/components/ui/animated-section";
 import { Container } from "@/components/ui/container";
 import { MotionReveal } from "@/components/ui/motion-reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <section className="py-20 sm:py-24">
+      <AnimatedSection className="py-20 sm:py-24">
         <Container>
           <div className="max-w-4xl">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-aurora">Services</p>
@@ -26,9 +27,9 @@ export default function ServicesPage() {
             </p>
           </div>
         </Container>
-      </section>
+      </AnimatedSection>
 
-      <section className="pb-24">
+      <AnimatedSection className="pb-24">
         <Container>
           <div className="grid gap-6">
             {services.map((service, index) => (
@@ -56,9 +57,9 @@ export default function ServicesPage() {
             ))}
           </div>
         </Container>
-      </section>
+      </AnimatedSection>
 
-      <section className="pb-24">
+      <AnimatedSection className="pb-24">
         <Container>
           <div className="rounded-lg border border-aurora/25 bg-aurora/10 p-8 sm:p-10">
             <SectionHeading
@@ -71,7 +72,7 @@ export default function ServicesPage() {
             </div>
           </div>
         </Container>
-      </section>
+      </AnimatedSection>
     </>
   );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ArrowUpRight } from "lucide-react";
+import { AnimatedSection } from "@/components/ui/animated-section";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 
@@ -16,7 +17,7 @@ const posts = [
 
 export default function InsightsPage() {
   return (
-    <section className="py-20 sm:py-24">
+    <AnimatedSection className="py-20 sm:py-24">
       <Container>
         <SectionHeading
           eyebrow="Insights"
@@ -37,6 +38,6 @@ export default function InsightsPage() {
           ))}
         </div>
       </Container>
-    </section>
+    </AnimatedSection>
   );
 }
