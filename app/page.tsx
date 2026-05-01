@@ -1,4 +1,5 @@
-import { ArrowRight, CheckCircle2, PlayCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { AutomationPipeline } from "@/components/home/automation-pipeline";
 import { HeroTitle } from "@/components/home/hero-title";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -42,35 +43,7 @@ export default function Home() {
           </MotionReveal>
 
           <MotionReveal delay={0.12}>
-            <div className="glass relative rounded-lg p-5">
-              <div className="rounded-md border border-white/8 bg-black/28 p-5">
-                <div className="flex items-center justify-between border-b border-white/8 pb-4">
-                  <div>
-                    <p className="text-sm text-white/45">Aurentra Growth OS</p>
-                    <p className="text-lg font-semibold text-white">Automation Pipeline</p>
-                  </div>
-                  <span className="rounded-md bg-emerald-400/12 px-3 py-1 text-xs font-semibold text-emerald-200">Live</span>
-                </div>
-                <div className="mt-6 grid gap-4">
-                  {["Lead capture", "AI qualification", "Proposal workflow", "Performance dashboard"].map((item, index) => (
-                    <div key={item} className="flex items-center gap-4 rounded-md border border-white/8 bg-white/[0.03] p-4">
-                      <span className="flex size-9 items-center justify-center rounded-md bg-aurora/15 text-sm font-semibold text-aurora">0{index + 1}</span>
-                      <div className="flex-1">
-                        <p className="font-medium text-white">{item}</p>
-                        <div className="mt-2 h-2 rounded-full bg-white/8">
-                          <div className="h-2 rounded-full bg-gradient-to-r from-aurora to-ember" style={{ width: `${58 + index * 10}%` }} />
-                        </div>
-                      </div>
-                      <CheckCircle2 aria-hidden className="size-5 text-emerald-300" />
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-5 flex items-center gap-3 rounded-md bg-white/6 p-4">
-                  <PlayCircle aria-hidden className="size-8 text-aurora" />
-                  <p className="text-sm leading-6 text-white/64">Connected workflows, product-grade UX, and measurable growth in one delivery track.</p>
-                </div>
-              </div>
-            </div>
+            <AutomationPipeline />
           </MotionReveal>
         </Container>
       </section>
