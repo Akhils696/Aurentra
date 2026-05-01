@@ -1,7 +1,9 @@
 import { ArrowRight, CheckCircle2, PlayCircle } from "lucide-react";
+import { HeroTitle } from "@/components/home/hero-title";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { MotionReveal } from "@/components/ui/motion-reveal";
+import { MotionScaleIn } from "@/components/ui/motion-scale-in";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { ServiceCard } from "@/components/ui/service-card";
 import { projects, services, testimonials } from "@/lib/site-data";
@@ -22,20 +24,20 @@ export default function Home() {
               <p className="mb-5 inline-flex rounded-md border border-aurora/30 bg-aurora/10 px-3 py-2 text-sm font-medium text-red-100">
                 AI-first technology partner for modern businesses
               </p>
-              <h1 className="max-w-5xl text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
-                Transforming Businesses with <span className="gradient-text">AI & Digital Solutions</span>
-              </h1>
+              <HeroTitle />
               <p className="mt-6 max-w-2xl text-lg leading-8 text-white/68">
                 Aurentra Technologies builds intelligent automations, high-performance websites, mobile apps, and digital operating systems that help teams grow faster with less friction.
               </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Button href="/contact">
-                  Get Started <ArrowRight aria-hidden className="ml-2 size-4" />
-                </Button>
-                <Button href="/contact" variant="secondary">
-                  Contact Us
-                </Button>
-              </div>
+              <MotionScaleIn delay={0.45}>
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                  <Button href="/contact">
+                    Get Started <ArrowRight aria-hidden className="ml-2 size-4" />
+                  </Button>
+                  <Button href="/contact" variant="secondary">
+                    Contact Us
+                  </Button>
+                </div>
+              </MotionScaleIn>
             </div>
           </MotionReveal>
 

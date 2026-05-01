@@ -41,3 +41,29 @@ body {
   background-clip: text;
   color: transparent;
 }
+
+.shimmer-text {
+  background: linear-gradient(110deg, #ffffff 0%, #fecaca 28%, #f97316 48%, #ffffff 62%, #fca5a5 100%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer-gradient 5.5s ease-in-out infinite;
+}
+
+@keyframes shimmer-gradient {
+  0%,
+  28% {
+    background-position: 0% 50%;
+  }
+  70%,
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shimmer-text {
+    animation: none;
+  }
+}
