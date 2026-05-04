@@ -167,6 +167,18 @@ p {
   transform: translateX(3px);
 }
 
+.button-light-sweep {
+  transform: translateX(-120%) skewX(-18deg);
+}
+
+.button-sweep:hover .button-light-sweep {
+  opacity: 0.55;
+  transform: translateX(360%) skewX(-18deg);
+  transition:
+    transform 760ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 260ms ease-in-out;
+}
+
 @keyframes ripple {
   from {
     opacity: 0.45;
@@ -197,7 +209,8 @@ p {
   }
 
   .motion-button,
-  .motion-button svg:last-child {
+  .motion-button svg:last-child,
+  .button-light-sweep {
     transition: none;
   }
 

@@ -36,15 +36,16 @@ export function Button({ href, children, variant = "primary", className, type = 
   }
 
   const classes = cn(
-    "motion-button group relative inline-flex min-h-11 items-center justify-center overflow-hidden rounded-md px-5 py-3 text-sm font-semibold transition duration-300 ease-in-out hover:-translate-y-0.5 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-aurora focus:ring-offset-2 focus:ring-offset-ink active:scale-[0.99]",
-    variant === "primary" && "bg-white text-ink shadow-glow hover:bg-frost hover:shadow-[0_0_34px_rgba(255,255,255,0.18)]",
-    variant === "secondary" && "border border-white/15 bg-white/8 text-white hover:border-aurora/60 hover:bg-aurora/12 hover:shadow-[0_0_28px_rgba(239,68,68,0.16)]",
+    "motion-button button-sweep group relative inline-flex min-h-11 items-center justify-center overflow-hidden rounded-md px-5 py-3 text-sm font-semibold transition duration-300 ease-in-out hover:-translate-y-0.5 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-aurora focus:ring-offset-2 focus:ring-offset-ink active:scale-[0.99]",
+    variant === "primary" && "border border-white/18 bg-[linear-gradient(135deg,#ffffff_0%,#fee2e2_46%,#fb7185_100%)] text-ink shadow-[inset_0_1px_0_rgba(255,255,255,0.7),0_18px_48px_rgba(239,68,68,0.22)] hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.85),0_22px_62px_rgba(239,68,68,0.32)]",
+    variant === "secondary" && "border border-aurora/30 bg-white/[0.055] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_0_0_1px_rgba(255,255,255,0.025)] hover:border-aurora/70 hover:bg-aurora/12 hover:shadow-[0_0_34px_rgba(239,68,68,0.18)]",
     variant === "ghost" && "text-white/80 hover:bg-white/8 hover:text-white",
     className,
   );
   const content = (
     <>
       <span className="relative z-10 inline-flex items-center justify-center">{children}</span>
+      <span className="button-light-sweep pointer-events-none absolute inset-y-0 -left-1/2 w-1/2 skew-x-[-18deg] bg-white/35 opacity-0 blur-sm transition" />
       {ripple ? (
         <span
           key={ripple.id}
