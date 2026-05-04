@@ -8,7 +8,7 @@ export function HeroTitle() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <h1 className="max-w-5xl text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
+    <h1 className="premium-heading max-w-5xl text-5xl font-semibold text-white sm:text-6xl lg:text-7xl">
       <span className="inline-flex flex-wrap gap-x-4 gap-y-2">
         {words.map((word, index) => (
           <motion.span
