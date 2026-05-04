@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { MotionReveal } from "@/components/ui/motion-reveal";
 import { MotionScaleIn } from "@/components/ui/motion-scale-in";
+import { SectionDivider } from "@/components/ui/section-divider";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { ServiceCard } from "@/components/ui/service-card";
 import { projects, services, testimonials } from "@/lib/site-data";
@@ -48,6 +49,8 @@ export default function Home() {
         </Container>
       </section>
 
+      <SectionDivider />
+
       <section className="py-12">
         <Container>
           <div className="grid gap-4 rounded-lg border border-white/8 bg-white/[0.03] p-4 sm:grid-cols-3">
@@ -60,6 +63,8 @@ export default function Home() {
           </div>
         </Container>
       </section>
+
+      <SectionDivider />
 
       <section className="section-depth py-20">
         <Container>
@@ -81,6 +86,8 @@ export default function Home() {
         </Container>
       </section>
 
+      <SectionDivider />
+
       <section className="section-depth py-20">
         <Container>
           <SectionHeading
@@ -100,6 +107,8 @@ export default function Home() {
           </div>
         </Container>
       </section>
+
+      <SectionDivider />
 
       <section className="py-20">
         <Container>
