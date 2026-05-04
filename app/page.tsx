@@ -1,11 +1,13 @@
 import { ArrowRight } from "lucide-react";
 import { AutomationPipeline } from "@/components/home/automation-pipeline";
+import { HeroParallax } from "@/components/home/hero-parallax";
 import { HeroTitle } from "@/components/home/hero-title";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { MotionReveal } from "@/components/ui/motion-reveal";
 import { MotionScaleIn } from "@/components/ui/motion-scale-in";
 import { SectionDivider } from "@/components/ui/section-divider";
+import { ParallaxCard } from "@/components/ui/parallax-card";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { ServiceCard } from "@/components/ui/service-card";
 import { projects, services, testimonials } from "@/lib/site-data";
@@ -19,7 +21,7 @@ const stats = [
 export default function Home() {
   return (
     <>
-      <section className="relative overflow-hidden py-20 sm:py-24 lg:py-28">
+      <HeroParallax>
         <Container className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
           <MotionReveal>
             <div>
@@ -47,7 +49,7 @@ export default function Home() {
             <AutomationPipeline />
           </MotionReveal>
         </Container>
-      </section>
+      </HeroParallax>
 
       <SectionDivider />
 
@@ -98,11 +100,13 @@ export default function Home() {
           />
           <div className="mt-12 grid gap-5 md:grid-cols-3">
             {projects.map((project) => (
-              <div key={project.title} className="glass rounded-lg p-6">
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-aurora">{project.category}</p>
-                <h3 className="mt-5 text-2xl font-semibold text-white">{project.title}</h3>
-                <p className="mt-6 rounded-md bg-white/6 p-4 text-sm font-medium text-white/72">{project.result}</p>
-              </div>
+              <ParallaxCard key={project.title} offset={10}>
+                <div className="glass rounded-lg p-6">
+                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-aurora">{project.category}</p>
+                  <h3 className="mt-5 text-2xl font-semibold text-white">{project.title}</h3>
+                  <p className="mt-6 rounded-md bg-white/6 p-4 text-sm font-medium text-white/72">{project.result}</p>
+                </div>
+              </ParallaxCard>
             ))}
           </div>
         </Container>
