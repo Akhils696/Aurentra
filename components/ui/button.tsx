@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
 type ButtonProps = {
@@ -14,10 +14,25 @@ type ButtonProps = {
 
 export function Button({ href, children, variant = "primary", className, type = "button" }: ButtonProps) {
   const [ripple, setRipple] = useState<{ x: number; y: number; id: number } | null>(null);
+  const ref = useRef<HTMLElement | null>(null);
 
   function createRipple(event: React.MouseEvent<HTMLElement>) {
     const rect = event.currentTarget.getBoundingClientRect();
     setRipple({ x: event.clientX - rect.left, y: event.clientY - rect.top, id: Date.now() });
+  }
+
+  function moveMagnet(event: React.MouseEvent<HTMLElement>) {
+    const element = ref.current;
+    if (!element || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const rect = element.getBoundingClientRect();
+    const x = (event.clientX - rect.left - rect.width / 2) * 0.12;
+    const y = (event.clientY - rect.top - rect.height / 2) * 0.12;
+    element.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+  }
+
+  function resetMagnet() {
+    const element = ref.current;
+    if (element) element.style.transform = "";
   }
 
   const classes = cn(
@@ -42,14 +57,34 @@ export function Button({ href, children, variant = "primary", className, type = 
 
   if (href) {
     return (
-      <Link href={href} className={classes} onClick={createRipple}>
+      <Link
+        href={href}
+        className={classes}
+        onClick={createRipple}
+        onMouseMove={moveMagnet}
+        onMouseLeave={resetMagnet}
+        ref={(node) => {
+          ref.current = node;
+        }}
+        data-cursor="interactive"
+      >
         {content}
       </Link>
     );
   }
 
   return (
-    <button type={type} className={classes} onClick={createRipple}>
+    <button
+      type={type}
+      className={classes}
+      onClick={createRipple}
+      onMouseMove={moveMagnet}
+      onMouseLeave={resetMagnet}
+      ref={(node) => {
+        ref.current = node;
+      }}
+      data-cursor="interactive"
+    >
       {content}
     </button>
   );
