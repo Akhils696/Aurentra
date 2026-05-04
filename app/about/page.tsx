@@ -61,7 +61,7 @@ export default function AboutPage() {
             />
             <div className="grid gap-5 sm:grid-cols-2">
               {differentiators.map((item) => (
-                <div key={item.title} className="rounded-lg border border-white/8 bg-white/[0.035] p-6">
+                <div key={item.title} className="depth-card rounded-lg p-6">
                   <item.icon aria-hidden className="size-7 text-aurora" />
                   <h3 className="mt-5 text-xl font-semibold text-white">{item.title}</h3>
                   <p className="mt-3 leading-7 text-white/60">{item.copy}</p>
@@ -77,7 +77,7 @@ export default function AboutPage() {
           <SectionHeading eyebrow="How We Work" title="Calm process, sharp execution" align="center" />
           <div className="mt-10 grid gap-4 lg:grid-cols-3">
             {milestones.map((milestone, index) => (
-              <div key={milestone} className="rounded-lg border border-white/8 bg-black/18 p-6">
+              <div key={milestone} className="depth-card rounded-lg p-6">
                 <p className="text-sm font-semibold text-aurora">0{index + 1}</p>
                 <p className="mt-4 leading-8 text-white/68">{milestone}</p>
               </div>

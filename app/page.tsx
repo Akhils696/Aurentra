@@ -61,7 +61,7 @@ export default function Home() {
         </Container>
       </section>
 
-      <section className="py-20">
+      <section className="section-depth py-20">
         <Container>
           <div className="mb-10 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <SectionHeading
@@ -81,7 +81,7 @@ export default function Home() {
         </Container>
       </section>
 
-      <section className="py-20">
+      <section className="section-depth py-20">
         <Container>
           <SectionHeading
             eyebrow="Portfolio"
@@ -106,7 +106,7 @@ export default function Home() {
           <SectionHeading eyebrow="Testimonials" title="Trusted by teams building their next chapter" align="center" />
           <div className="mt-10 grid gap-5 lg:grid-cols-3">
             {testimonials.map((testimonial) => (
-              <figure key={testimonial.name} className="rounded-lg border border-white/8 bg-white/[0.035] p-6">
+              <figure key={testimonial.name} className="depth-card rounded-lg p-6">
                 <blockquote className="leading-8 text-white/72">“{testimonial.quote}”</blockquote>
                 <figcaption className="mt-6">
                   <p className="font-semibold text-white">{testimonial.name}</p>

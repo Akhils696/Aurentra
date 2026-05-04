@@ -34,7 +34,7 @@ export default function ServicesPage() {
           <div className="grid gap-6">
             {services.map((service, index) => (
               <MotionReveal key={service.slug} delay={index * 0.04}>
-                <article id={service.slug} className="scroll-mt-28 rounded-lg border border-white/8 bg-white/[0.035] p-6 sm:p-8 lg:p-10">
+                <article id={service.slug} className="depth-card scroll-mt-28 rounded-lg p-6 sm:p-8 lg:p-10">
                   <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
                     <div>
                       <div className="mb-6 flex size-14 items-center justify-center rounded-md bg-aurora/12 text-aurora">
