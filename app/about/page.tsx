@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/container";
+import { AnimatedIcon } from "@/components/ui/animated-icon";
 import { MotionReveal } from "@/components/ui/motion-reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { differentiators, team } from "@/lib/site-data";
@@ -62,7 +63,7 @@ export default function AboutPage() {
             <div className="grid gap-5 sm:grid-cols-2">
               {differentiators.map((item) => (
                 <div key={item.title} className="depth-card rounded-lg p-6">
-                  <item.icon aria-hidden className="size-7 text-aurora" />
+                  <AnimatedIcon className="inline-flex text-aurora"><item.icon aria-hidden className="size-7" /></AnimatedIcon>
                   <h3 className="mt-5 text-xl font-semibold text-white">{item.title}</h3>
                   <p className="mt-3 leading-7 text-white/60">{item.copy}</p>
                 </div>
@@ -92,9 +93,9 @@ export default function AboutPage() {
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {team.map((member) => (
               <div key={member.name} className="glass rounded-lg p-6">
-                <div className="flex size-14 items-center justify-center rounded-md bg-aurora/12 text-aurora">
+                <AnimatedIcon className="flex size-14 items-center justify-center rounded-md bg-aurora/12 text-aurora">
                   <member.icon aria-hidden className="size-7" />
-                </div>
+                </AnimatedIcon>
                 <h3 className="mt-6 text-xl font-semibold text-white">{member.name}</h3>
                 <p className="mt-2 text-white/55">{member.role}</p>
               </div>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { AtSign, Mail, MapPin } from "lucide-react";
 import { Container } from "@/components/ui/container";
+import { AnimatedIcon } from "@/components/ui/animated-icon";
 import { navItems, services } from "@/lib/site-data";
 
 export function Footer() {
@@ -27,7 +28,7 @@ export function Footer() {
                   aria-label={`Aurentra ${label}`}
                   className="flex size-10 items-center justify-center rounded-md border border-white/12 text-white/65 transition hover:border-aurora/60 hover:text-white"
                 >
-                  <Icon aria-hidden className="size-5" />
+                  <AnimatedIcon><Icon aria-hidden className="size-5" /></AnimatedIcon>
                 </Link>
               ))}
             </div>

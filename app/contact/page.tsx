@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { AtSign, Mail, MapPin, Phone } from "lucide-react";
 import { ContactForm } from "@/components/contact/contact-form";
 import { AnimatedSection } from "@/components/ui/animated-section";
+import { AnimatedIcon } from "@/components/ui/animated-icon";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 
@@ -45,9 +46,9 @@ export default function ContactPage() {
               </div>
               {details.map((detail) => (
                 <div key={detail.label} className="flex gap-4 rounded-lg border border-white/8 bg-black/18 p-5">
-                  <span className="flex size-11 flex-none items-center justify-center rounded-md bg-aurora/12 text-aurora">
+                  <AnimatedIcon className="flex size-11 flex-none items-center justify-center rounded-md bg-aurora/12 text-aurora">
                     <detail.icon aria-hidden className="size-5" />
-                  </span>
+                  </AnimatedIcon>
                   <div>
                     <p className="font-semibold text-white">{detail.label}</p>
                     <p className="mt-1 text-white/58">{detail.value}</p>
