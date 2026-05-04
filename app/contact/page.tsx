@@ -35,7 +35,7 @@ export default function ContactPage() {
         </Container>
       </AnimatedSection>
 
-      <AnimatedSection className="pb-24">
+      <AnimatedSection className="pb-24 sm:pb-28">
         <Container>
           <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
             <ContactForm />

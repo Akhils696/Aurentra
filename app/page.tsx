@@ -51,7 +51,7 @@ export default function Home() {
 
       <SectionDivider />
 
-      <section className="py-12">
+      <section className="py-14 sm:py-16">
         <Container>
           <div className="grid gap-4 rounded-lg border border-white/8 bg-white/[0.03] p-4 sm:grid-cols-3">
             {stats.map((stat) => (
@@ -66,9 +66,9 @@ export default function Home() {
 
       <SectionDivider />
 
-      <section className="section-depth py-20">
+      <section className="section-depth py-20 sm:py-24">
         <Container>
-          <div className="mb-10 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <SectionHeading
               eyebrow="Services"
               title="Focused capabilities for AI-led growth"
@@ -88,7 +88,7 @@ export default function Home() {
 
       <SectionDivider />
 
-      <section className="section-depth py-20">
+      <section className="section-depth py-20 sm:py-24">
         <Container>
           <SectionHeading
             eyebrow="Portfolio"
@@ -96,7 +96,7 @@ export default function Home() {
             copy="A snapshot of the kind of systems Aurentra builds: practical, polished, and tied to business results."
             align="center"
           />
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
             {projects.map((project) => (
               <div key={project.title} className="glass rounded-lg p-6">
                 <p className="text-sm font-semibold uppercase tracking-[0.18em] text-aurora">{project.category}</p>
@@ -110,10 +110,10 @@ export default function Home() {
 
       <SectionDivider />
 
-      <section className="py-20">
+      <section className="py-20 sm:py-24">
         <Container>
           <SectionHeading eyebrow="Testimonials" title="Trusted by teams building their next chapter" align="center" />
-          <div className="mt-10 grid gap-5 lg:grid-cols-3">
+          <div className="mt-12 grid gap-5 lg:grid-cols-3">
             {testimonials.map((testimonial) => (
               <figure key={testimonial.name} className="depth-card rounded-lg p-6">
                 <blockquote className="leading-8 text-white/72">“{testimonial.quote}”</blockquote>
@@ -127,7 +127,7 @@ export default function Home() {
         </Container>
       </section>
 
-      <section className="pb-24 pt-10">
+      <section className="pb-24 pt-12 sm:pb-28">
         <Container>
           <div className="overflow-hidden rounded-lg border border-aurora/30 bg-gradient-to-br from-aurora/22 via-white/[0.06] to-ember/18 p-8 sm:p-10 lg:p-12">
             <div className="max-w-3xl">

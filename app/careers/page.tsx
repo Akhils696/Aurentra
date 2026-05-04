@@ -33,7 +33,7 @@ export default function CareersPage() {
         </Container>
       </section>
 
-      <section className="py-12">
+      <section className="py-14 sm:py-16">
         <Container>
           <SectionHeading eyebrow="Open Roles" title="Current opportunities" />
           <div className="mt-8 grid gap-5">
@@ -56,7 +56,7 @@ export default function CareersPage() {
         </Container>
       </section>
 
-      <section className="py-20">
+      <section className="py-20 sm:py-24">
         <Container>
           <div className="grid gap-5 md:grid-cols-3">
             {benefits.map((benefit) => (
@@ -69,7 +69,7 @@ export default function CareersPage() {
         </Container>
       </section>
 
-      <section id="apply" className="pb-24">
+      <section id="apply" className="pb-24 sm:pb-28">
         <Container>
           <div className="grid gap-10 rounded-lg border border-white/8 bg-white/[0.035] p-6 sm:p-8 lg:grid-cols-[0.85fr_1.15fr]">
             <SectionHeading

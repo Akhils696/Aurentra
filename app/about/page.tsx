@@ -35,7 +35,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="py-16">
+      <section className="py-16 sm:py-20">
         <Container>
           <div className="grid gap-5 lg:grid-cols-3">
             {[
@@ -52,7 +52,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="py-20">
+      <section className="py-20 sm:py-24">
         <Container>
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <SectionHeading
@@ -73,7 +73,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="py-20">
+      <section className="py-20 sm:py-24">
         <Container>
           <SectionHeading eyebrow="How We Work" title="Calm process, sharp execution" align="center" />
           <div className="mt-10 grid gap-4 lg:grid-cols-3">
@@ -87,7 +87,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="pb-24 pt-12">
+      <section className="pb-24 pt-12 sm:pb-28">
         <Container>
           <SectionHeading eyebrow="Team" title="A compact senior team model" copy="Placeholder leadership profiles show the type of cross-functional expertise behind Aurentra delivery." />
           <div className="mt-10 grid gap-5 md:grid-cols-3">

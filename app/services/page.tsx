@@ -29,7 +29,7 @@ export default function ServicesPage() {
         </Container>
       </AnimatedSection>
 
-      <AnimatedSection className="pb-24">
+      <AnimatedSection className="pb-24 sm:pb-28">
         <Container>
           <div className="grid gap-6">
             {services.map((service, index) => (
@@ -59,7 +59,7 @@ export default function ServicesPage() {
         </Container>
       </AnimatedSection>
 
-      <AnimatedSection className="pb-24">
+      <AnimatedSection className="pb-24 sm:pb-28">
         <Container>
           <div className="rounded-lg border border-aurora/25 bg-aurora/10 p-8 sm:p-10">
             <SectionHeading
