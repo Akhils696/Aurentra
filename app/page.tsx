@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { AutomationPipeline } from "@/components/home/automation-pipeline";
 import { HeroParallax } from "@/components/home/hero-parallax";
 import { HeroTitle } from "@/components/home/hero-title";
+import { ProductVisuals } from "@/components/home/product-visuals";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { MotionReveal } from "@/components/ui/motion-reveal";
@@ -64,6 +65,21 @@ export default function Home() {
                 <p className="mt-2 text-sm leading-6 text-white/55">{stat.label}</p>
               </div>
             ))}
+          </div>
+        </Container>
+      </section>
+
+      <SectionDivider />
+
+      <section className="py-20 sm:py-24">
+        <Container>
+          <div className="grid gap-10 lg:grid-cols-[0.42fr_0.58fr] lg:items-center">
+            <SectionHeading
+              eyebrow="Use Case"
+              title="A real workflow your team can see and improve"
+              copy="Instead of presenting AI as magic, we design the screens, handoffs, and review points that make automation usable day to day."
+            />
+            <ProductVisuals />
           </div>
         </Container>
       </section>
