@@ -29,8 +29,8 @@ export default function Home() {
                 AI-first technology partner for modern businesses
               </p>
               <HeroTitle />
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-white/68">
-                Aurentra Technologies builds intelligent automations, high-performance websites, mobile apps, and digital operating systems that help teams grow faster with less friction.
+              <p className="mt-7 max-w-xl text-lg leading-9 text-white/66">
+                We help teams replace slow manual work with clear digital systems: practical automations, sharper websites, and mobile workflows people can actually use.
               </p>
               <MotionScaleIn delay={0.45}>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -70,13 +70,13 @@ export default function Home() {
 
       <SectionDivider />
 
-      <section className="section-depth py-20 sm:py-24">
+      <section className="section-depth py-24 sm:py-28">
         <Container>
           <div className="mb-12 grid gap-8 md:grid-cols-[0.72fr_0.28fr] md:items-end">
             <SectionHeading
               eyebrow="Services"
-              title="Focused capabilities for AI-led growth"
-              copy="From first strategy call to production launch, we bring the design, engineering, and automation expertise needed to make digital transformation practical."
+              title="Focused work, not a menu of everything"
+              copy="Most teams do not need more software. They need the right few systems connected well enough to save time, create clarity, and support growth."
             />
             <Button href="/services" variant="secondary">View Services</Button>
           </div>
@@ -92,13 +92,13 @@ export default function Home() {
 
       <SectionDivider />
 
-      <section className="section-depth py-20 sm:py-24">
+      <section className="section-depth py-24 sm:py-28">
         <Container>
           <div className="ml-auto max-w-4xl">
           <SectionHeading
             eyebrow="Portfolio"
-            title="Representative project outcomes"
-            copy="A snapshot of the kind of systems Aurentra builds: practical, polished, and tied to business results."
+            title="What the work tends to look like"
+            copy="The best projects are not the loudest ones. They are the systems that quietly make a team faster every week."
           />
           </div>
           <div className="mt-12 grid gap-5 md:grid-cols-3">
@@ -117,7 +117,7 @@ export default function Home() {
 
       <SectionDivider />
 
-      <section className="py-20 sm:py-24">
+      <section className="py-24 sm:py-28">
         <Container>
           <SectionHeading eyebrow="Testimonials" title="Trusted by teams building their next chapter" />
           <div className="mt-12 grid gap-5 lg:grid-cols-[0.92fr_1.08fr_0.88fr]">
@@ -139,9 +139,9 @@ export default function Home() {
           <div className="overflow-hidden rounded-lg border border-aurora/30 bg-gradient-to-br from-aurora/22 via-white/[0.06] to-ember/18 p-8 sm:p-10 lg:p-12">
             <div className="max-w-3xl">
               <p className="text-sm font-semibold uppercase tracking-[0.22em] text-red-100">Ready when you are</p>
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-5xl">Build the systems your business should already have.</h2>
-              <p className="mt-5 text-lg leading-8 text-white/68">
-                Tell us where growth is getting stuck. We will help turn it into a roadmap, a product, and an automation layer your team can actually use.
+              <h2 className="mt-4 max-w-2xl text-3xl font-semibold tracking-tight text-white sm:text-5xl">Let’s build the part of your business that keeps getting postponed.</h2>
+              <p className="mt-6 max-w-2xl text-lg leading-9 text-white/66">
+                Bring the messy workflow, half-built idea, or growth bottleneck. We will help turn it into a useful first version.
               </p>
               <div className="mt-8">
                 <Button href="/contact">Start Your Transformation</Button>
