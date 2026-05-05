@@ -6,6 +6,7 @@ import { Container } from "@/components/ui/container";
 import { MotionReveal } from "@/components/ui/motion-reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { services } from "@/lib/site-data";
+import { customServiceIcons } from "@/components/ui/brand-icons";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -38,7 +39,10 @@ export default function ServicesPage() {
                   <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
                     <div>
                       <div className="mb-6 flex size-14 items-center justify-center rounded-md bg-aurora/12 text-aurora">
-                        <service.icon aria-hidden className="size-7" />
+                        {(() => {
+                          const Icon = customServiceIcons[service.slug as keyof typeof customServiceIcons] ?? service.icon;
+                          return <Icon aria-hidden className="size-7" />;
+                        })()}
                       </div>
                       <h2 className="text-3xl font-semibold text-white">{service.title}</h2>
                       <p className="mt-4 leading-8 text-white/66">{service.summary}</p>

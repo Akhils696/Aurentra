@@ -1,5 +1,6 @@
 import type { LucideIcon } from "lucide-react";
 import { ServiceCardMotion } from "@/components/ui/service-card-motion";
+import { customServiceIcons } from "@/components/ui/brand-icons";
 
 type ServiceCardProps = {
   title: string;
@@ -9,7 +10,9 @@ type ServiceCardProps = {
 };
 
 export function ServiceCard({ title, summary, slug, icon: Icon }: ServiceCardProps) {
+  const CustomIcon = customServiceIcons[slug as keyof typeof customServiceIcons] ?? Icon;
+
   return (
-    <ServiceCardMotion href={`/services#${slug}`} title={title} summary={summary} icon={<Icon aria-hidden className="size-6" />} />
+    <ServiceCardMotion href={`/services#${slug}`} title={title} summary={summary} icon={<CustomIcon aria-hidden className="size-6" />} />
   );
 }
