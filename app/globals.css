@@ -32,8 +32,12 @@ h1,
 h2,
 h3 {
   text-wrap: balance;
-  line-height: 1.04;
+  line-height: 1.02;
   letter-spacing: 0;
+}
+
+h3 {
+  line-height: 1.14;
 }
 
 p {
@@ -157,6 +161,18 @@ p {
 
 .premium-heading:hover {
   letter-spacing: 0.006em;
+}
+
+.body-copy {
+  color: rgba(255, 255, 255, 0.66);
+  line-height: 1.78;
+}
+
+.quiet-label {
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 
 .motion-button svg:last-child {

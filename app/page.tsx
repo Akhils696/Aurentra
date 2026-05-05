@@ -30,7 +30,7 @@ export default function Home() {
                 AI-first technology partner for modern businesses
               </p>
               <HeroTitle />
-              <p className="mt-7 max-w-xl text-lg leading-9 text-white/66">
+              <p className="body-copy mt-7 max-w-xl text-lg">
                 We help teams replace slow manual work with clear digital systems: practical automations, sharper websites, and mobile workflows people can actually use.
               </p>
               <MotionScaleIn delay={0.45}>
@@ -58,7 +58,7 @@ export default function Home() {
 
       <section className="py-16">
         <Container>
-          <p className="max-w-3xl text-2xl leading-10 text-white/74">
+          <p className="max-w-3xl text-2xl font-medium leading-10 text-white/78">
             The work usually starts with one frustrating bottleneck: leads getting missed, teams copying data by hand, or a website that no longer reflects the business.
           </p>
         </Container>
@@ -98,7 +98,7 @@ export default function Home() {
 
       <section className="section-depth py-24 sm:py-28">
         <Container>
-          <p className="mb-8 max-w-xl text-sm uppercase tracking-[0.2em] text-white/38">How we turn that into momentum</p>
+          <p className="quiet-label mb-8 max-w-xl font-semibold">How we turn that into momentum</p>
           <div className="mb-12 grid gap-8 md:grid-cols-[0.72fr_0.28fr] md:items-end">
             <SectionHeading
               eyebrow="Services"
@@ -121,7 +121,7 @@ export default function Home() {
 
       <section className="section-depth py-24 sm:py-28">
         <Container>
-          <p className="mb-8 ml-auto max-w-xl text-sm uppercase tracking-[0.2em] text-white/38">The result is not just a launch, but a calmer operating rhythm</p>
+          <p className="quiet-label mb-8 ml-auto max-w-xl font-semibold">The result is not just a launch, but a calmer operating rhythm</p>
           <div className="ml-auto max-w-4xl">
           <SectionHeading
             eyebrow="Portfolio"
@@ -168,7 +168,7 @@ export default function Home() {
             <div className="max-w-3xl">
               <p className="text-sm font-semibold uppercase tracking-[0.22em] text-red-100">Ready when you are</p>
               <h2 className="mt-4 max-w-2xl text-3xl font-semibold tracking-tight text-white sm:text-5xl">Let’s build the part of your business that keeps getting postponed.</h2>
-              <p className="mt-6 max-w-2xl text-lg leading-9 text-white/66">
+              <p className="body-copy mt-6 max-w-2xl text-lg">
                 Bring the messy workflow, half-built idea, or growth bottleneck. We will help turn it into a useful first version.
               </p>
               <div className="mt-8">
