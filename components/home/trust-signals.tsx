@@ -16,7 +16,7 @@ export function TrustSignals() {
       <div className="grid gap-5">
         <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
           {clientMarks.map((mark) => (
-            <div key={mark} className="rounded-md border border-white/7 bg-white/[0.025] px-4 py-4 text-sm font-medium text-white/52">
+            <div key={mark} className="rounded-md bg-white/[0.025] px-4 py-4 text-sm font-medium text-white/52">
               {mark}
             </div>
           ))}

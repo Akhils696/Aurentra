@@ -6,7 +6,7 @@ export function SectionDivider() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <div aria-hidden className="relative h-px overflow-visible">
+    <div aria-hidden className="relative h-px overflow-visible opacity-70">
       <motion.div
         className="absolute left-1/2 top-0 h-px w-[min(72rem,86vw)] -translate-x-1/2 bg-gradient-to-r from-transparent via-white/18 to-transparent blur-[0.2px]"
         animate={prefersReducedMotion ? undefined : { opacity: [0.28, 0.72, 0.28], x: ["-50%", "-48%", "-50%"] }}
