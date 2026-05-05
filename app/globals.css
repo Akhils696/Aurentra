@@ -20,8 +20,8 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   background:
-    radial-gradient(circle at top left, rgba(239, 68, 68, 0.16), transparent 34rem),
-    radial-gradient(circle at bottom right, rgba(249, 115, 22, 0.12), transparent 30rem),
+    radial-gradient(circle at top left, rgba(239, 68, 68, 0.08), transparent 34rem),
+    radial-gradient(circle at bottom right, rgba(148, 163, 184, 0.08), transparent 30rem),
     #0b0d12;
   color: #f7f8fb;
   text-rendering: optimizeLegibility;
@@ -42,7 +42,7 @@ p {
 
 .ambient-mesh {
   background:
-    linear-gradient(115deg, rgba(239, 68, 68, 0.1), transparent 32%, rgba(249, 115, 22, 0.08) 54%, transparent 76%),
+    linear-gradient(115deg, rgba(239, 68, 68, 0.055), transparent 32%, rgba(148, 163, 184, 0.06) 54%, transparent 76%),
     linear-gradient(35deg, transparent 0%, rgba(255, 255, 255, 0.035) 42%, transparent 70%);
   background-size: 220% 220%;
 }
@@ -94,13 +94,13 @@ p {
   inset: 8% 0 auto;
   z-index: -1;
   height: 46%;
-  background: linear-gradient(90deg, transparent, rgba(239, 68, 68, 0.06), transparent);
+  background: linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.055), transparent);
   filter: blur(42px);
   opacity: 0.7;
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #ffffff 12%, #fca5a5 52%, #f97316 100%);
+  background: linear-gradient(135deg, #ffffff 12%, #d7dde8 52%, #fca5a5 100%);
   background-size: 160% 160%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -109,7 +109,7 @@ p {
 }
 
 .shimmer-text {
-  background: linear-gradient(110deg, #ffffff 0%, #fecaca 28%, #f97316 48%, #ffffff 62%, #fca5a5 100%);
+  background: linear-gradient(110deg, #ffffff 0%, #e5e7eb 28%, #fca5a5 48%, #ffffff 62%, #d1d5db 100%);
   background-size: 220% 100%;
   -webkit-background-clip: text;
   background-clip: text;

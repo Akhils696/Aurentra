@@ -26,7 +26,7 @@ export default function Home() {
         <Container className="grid items-center gap-16 lg:grid-cols-[1.12fr_0.88fr]">
           <MotionReveal>
             <div>
-              <p className="mb-5 inline-flex rounded-md border border-aurora/30 bg-aurora/10 px-3 py-2 text-sm font-medium text-red-100">
+              <p className="mb-5 inline-flex rounded-md border border-white/12 bg-white/[0.045] px-3 py-2 text-sm font-medium text-white/72">
                 AI-first technology partner for modern businesses
               </p>
               <HeroTitle />
@@ -133,7 +133,7 @@ export default function Home() {
             {projects.map((project, index) => (
               <ParallaxCard key={project.title} offset={10}>
                 <div className={`glass rounded-lg ${index === 0 ? "p-7" : "p-6"} ${index === 1 ? "md:mt-10" : ""} ${index === 2 ? "md:-mt-4 p-8" : ""}`}>
-                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-aurora">{project.category}</p>
+                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/42">{project.category}</p>
                   <h3 className="mt-5 text-2xl font-semibold text-white">{project.title}</h3>
                   <p className="mt-6 rounded-md bg-white/6 p-4 text-sm font-medium text-white/72">{project.result}</p>
                 </div>
@@ -164,7 +164,7 @@ export default function Home() {
 
       <section className="pb-24 pt-12 sm:pb-28">
         <Container>
-          <div className="overflow-hidden rounded-lg border border-aurora/30 bg-gradient-to-br from-aurora/22 via-white/[0.06] to-ember/18 p-8 sm:p-10 lg:p-12">
+          <div className="overflow-hidden rounded-lg border border-white/10 bg-gradient-to-br from-white/[0.08] via-white/[0.04] to-aurora/10 p-8 sm:p-10 lg:p-12">
             <div className="max-w-3xl">
               <p className="text-sm font-semibold uppercase tracking-[0.22em] text-red-100">Ready when you are</p>
               <h2 className="mt-4 max-w-2xl text-3xl font-semibold tracking-tight text-white sm:text-5xl">Let’s build the part of your business that keeps getting postponed.</h2>
