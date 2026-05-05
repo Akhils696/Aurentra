@@ -22,7 +22,7 @@ export default function Home() {
           <MotionReveal>
             <div>
               <p className="mb-5 inline-flex rounded-md border border-white/12 bg-white/[0.045] px-3 py-2 text-sm font-medium text-white/72">
-                AI-first technology partner for modern businesses
+                Small team, practical systems, sharper growth
               </p>
               <HeroTitle />
               <p className="body-copy mt-7 max-w-xl text-lg">
@@ -31,10 +31,10 @@ export default function Home() {
               <MotionScaleIn delay={0.45}>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                   <Button href="/contact">
-                    Get Started <ArrowRight aria-hidden className="ml-2 size-4" />
+                    Let’s build something that works <ArrowRight aria-hidden className="ml-2 size-4" />
                   </Button>
                   <Button href="/contact" variant="secondary">
-                    Contact Us
+                    Tell us what’s stuck
                   </Button>
                 </div>
               </MotionScaleIn>
@@ -74,7 +74,7 @@ export default function Home() {
           <div className="grid gap-12 lg:grid-cols-[0.42fr_0.58fr] lg:items-center">
             <SectionHeading
               eyebrow="Use Case"
-              title="A real workflow your team can see and improve"
+              title="A real workflow your team can point at"
               copy="Instead of presenting AI as magic, we design the screens, handoffs, and review points that make automation usable day to day."
             />
             <ProductVisuals />
@@ -90,7 +90,7 @@ export default function Home() {
           <div className="mb-12 grid gap-8 md:grid-cols-[0.72fr_0.28fr] md:items-end">
             <SectionHeading
               eyebrow="Services"
-              title="Focused work, not a menu of everything"
+              title="Focused work, not a menu of buzzwords"
               copy="Most teams do not need more software. They need the right few systems connected well enough to save time, create clarity, and support growth."
             />
             <Button href="/services" variant="secondary">View Services</Button>
@@ -154,13 +154,13 @@ export default function Home() {
         <Container>
           <div className="overflow-hidden rounded-lg border border-white/10 bg-gradient-to-br from-white/[0.08] via-white/[0.04] to-aurora/10 p-8 sm:p-10 lg:p-12">
             <div className="max-w-3xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-red-100">Ready when you are</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-white/48">Ready when you are</p>
               <h2 className="mt-4 max-w-2xl text-3xl font-semibold tracking-tight text-white sm:text-5xl">Let’s build the part of your business that keeps getting postponed.</h2>
               <p className="body-copy mt-6 max-w-2xl text-lg">
                 Bring the messy workflow, half-built idea, or growth bottleneck. We will help turn it into a useful first version.
               </p>
               <div className="mt-8">
-                <Button href="/contact">Start Your Transformation</Button>
+                <Button href="/contact">Let’s talk through the workflow</Button>
               </div>
             </div>
           </div>

@@ -68,7 +68,7 @@ export function Navbar() {
         </div>
 
         <div className="hidden lg:block">
-          <Button href="/contact" variant="secondary">Start a Project</Button>
+          <Button href="/contact" variant="secondary">Talk to us</Button>
         </div>
 
         <button
