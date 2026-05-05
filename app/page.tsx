@@ -3,6 +3,7 @@ import { AutomationPipeline } from "@/components/home/automation-pipeline";
 import { HeroParallax } from "@/components/home/hero-parallax";
 import { HeroTitle } from "@/components/home/hero-title";
 import { ProductVisuals } from "@/components/home/product-visuals";
+import { TrustSignals } from "@/components/home/trust-signals";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { MotionReveal } from "@/components/ui/motion-reveal";
@@ -12,12 +13,6 @@ import { ParallaxCard } from "@/components/ui/parallax-card";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { ServiceCard } from "@/components/ui/service-card";
 import { projects, services, testimonials } from "@/lib/site-data";
-
-const stats = [
-  { value: "35+", label: "automation and product systems shipped" },
-  { value: "4.9/5", label: "average partner satisfaction" },
-  { value: "8 wks", label: "typical MVP delivery window" },
-];
 
 export default function Home() {
   return (
@@ -68,14 +63,7 @@ export default function Home() {
 
       <section className="py-14 sm:py-16">
         <Container>
-          <div className="ml-auto grid max-w-5xl gap-4 rounded-lg border border-white/8 bg-white/[0.03] p-4 sm:grid-cols-3">
-            {stats.map((stat) => (
-              <div key={stat.label} className="px-5 py-6 odd:pt-4 even:pb-7">
-                <p className="text-3xl font-semibold text-white">{stat.value}</p>
-                <p className="mt-2 text-sm leading-6 text-white/55">{stat.label}</p>
-              </div>
-            ))}
-          </div>
+          <TrustSignals />
         </Container>
       </section>
 
