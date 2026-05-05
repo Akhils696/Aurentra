@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <>
       <HeroParallax>
-        <Container className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
+        <Container className="grid items-center gap-16 lg:grid-cols-[1.12fr_0.88fr]">
           <MotionReveal>
             <div>
               <p className="mb-5 inline-flex rounded-md border border-aurora/30 bg-aurora/10 px-3 py-2 text-sm font-medium text-red-100">
@@ -46,7 +46,9 @@ export default function Home() {
           </MotionReveal>
 
           <MotionReveal delay={0.12}>
+            <div className="lg:translate-y-8">
             <AutomationPipeline />
+            </div>
           </MotionReveal>
         </Container>
       </HeroParallax>
@@ -55,7 +57,7 @@ export default function Home() {
 
       <section className="py-14 sm:py-16">
         <Container>
-          <div className="grid gap-4 rounded-lg border border-white/8 bg-white/[0.03] p-4 sm:grid-cols-3">
+          <div className="ml-auto grid max-w-5xl gap-4 rounded-lg border border-white/8 bg-white/[0.03] p-4 sm:grid-cols-3">
             {stats.map((stat) => (
               <div key={stat.label} className="p-5">
                 <p className="text-3xl font-semibold text-white">{stat.value}</p>
@@ -70,7 +72,7 @@ export default function Home() {
 
       <section className="section-depth py-20 sm:py-24">
         <Container>
-          <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div className="mb-12 grid gap-8 md:grid-cols-[0.72fr_0.28fr] md:items-end">
             <SectionHeading
               eyebrow="Services"
               title="Focused capabilities for AI-led growth"
@@ -78,7 +80,7 @@ export default function Home() {
             />
             <Button href="/services" variant="secondary">View Services</Button>
           </div>
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-[1.1fr_0.95fr_1.05fr_0.9fr]">
             {services.map((service, index) => (
               <MotionReveal key={service.slug} delay={index * 0.05}>
                 <ServiceCard {...service} />
@@ -92,16 +94,17 @@ export default function Home() {
 
       <section className="section-depth py-20 sm:py-24">
         <Container>
+          <div className="ml-auto max-w-4xl">
           <SectionHeading
             eyebrow="Portfolio"
             title="Representative project outcomes"
             copy="A snapshot of the kind of systems Aurentra builds: practical, polished, and tied to business results."
-            align="center"
           />
+          </div>
           <div className="mt-12 grid gap-5 md:grid-cols-3">
-            {projects.map((project) => (
+            {projects.map((project, index) => (
               <ParallaxCard key={project.title} offset={10}>
-                <div className="glass rounded-lg p-6">
+                <div className={`glass rounded-lg p-6 ${index === 1 ? "md:mt-10" : ""} ${index === 2 ? "md:-mt-4" : ""}`}>
                   <p className="text-sm font-semibold uppercase tracking-[0.18em] text-aurora">{project.category}</p>
                   <h3 className="mt-5 text-2xl font-semibold text-white">{project.title}</h3>
                   <p className="mt-6 rounded-md bg-white/6 p-4 text-sm font-medium text-white/72">{project.result}</p>
@@ -116,10 +119,10 @@ export default function Home() {
 
       <section className="py-20 sm:py-24">
         <Container>
-          <SectionHeading eyebrow="Testimonials" title="Trusted by teams building their next chapter" align="center" />
-          <div className="mt-12 grid gap-5 lg:grid-cols-3">
-            {testimonials.map((testimonial) => (
-              <figure key={testimonial.name} className="depth-card rounded-lg p-6">
+          <SectionHeading eyebrow="Testimonials" title="Trusted by teams building their next chapter" />
+          <div className="mt-12 grid gap-5 lg:grid-cols-[0.92fr_1.08fr_0.88fr]">
+            {testimonials.map((testimonial, index) => (
+              <figure key={testimonial.name} className={`depth-card rounded-lg p-6 ${index === 0 ? "lg:mt-8" : ""} ${index === 2 ? "lg:mt-14" : ""}`}>
                 <blockquote className="leading-8 text-white/72">“{testimonial.quote}”</blockquote>
                 <figcaption className="mt-6">
                   <p className="font-semibold text-white">{testimonial.name}</p>
