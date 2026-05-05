@@ -2,8 +2,8 @@ import { CheckCircle2 } from "lucide-react";
 
 export function ProductVisuals() {
   return (
-    <div className="grid gap-5 lg:grid-cols-[1.08fr_0.92fr]">
-      <div className="glass rounded-lg p-5">
+    <div className="grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
+      <div className="glass rounded-lg p-6">
         <div className="flex items-center justify-between border-b border-white/8 pb-4">
           <div>
             <p className="text-xs uppercase tracking-[0.2em] text-white/38">Ops Dashboard</p>
@@ -35,7 +35,7 @@ export function ProductVisuals() {
           ))}
         </div>
       </div>
-      <div className="depth-card rounded-lg p-5 lg:mt-12">
+      <div className="depth-card rounded-lg p-7 lg:mt-12">
         <p className="text-xs uppercase tracking-[0.2em] text-white/38">Workflow Map</p>
         <h3 className="mt-2 text-xl font-semibold text-white">A small system, clearly connected</h3>
         <div className="mt-6 grid gap-3">

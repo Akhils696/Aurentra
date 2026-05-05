@@ -70,7 +70,7 @@ export default function Home() {
         <Container>
           <div className="ml-auto grid max-w-5xl gap-4 rounded-lg border border-white/8 bg-white/[0.03] p-4 sm:grid-cols-3">
             {stats.map((stat) => (
-              <div key={stat.label} className="p-5">
+              <div key={stat.label} className="px-5 py-6 odd:pt-4 even:pb-7">
                 <p className="text-3xl font-semibold text-white">{stat.value}</p>
                 <p className="mt-2 text-sm leading-6 text-white/55">{stat.label}</p>
               </div>
@@ -83,7 +83,7 @@ export default function Home() {
 
       <section className="py-20 sm:py-24">
         <Container>
-          <div className="grid gap-10 lg:grid-cols-[0.42fr_0.58fr] lg:items-center">
+          <div className="grid gap-12 lg:grid-cols-[0.42fr_0.58fr] lg:items-center">
             <SectionHeading
               eyebrow="Use Case"
               title="A real workflow your team can see and improve"
@@ -107,7 +107,7 @@ export default function Home() {
             />
             <Button href="/services" variant="secondary">View Services</Button>
           </div>
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-[1.1fr_0.95fr_1.05fr_0.9fr]">
+          <div className="grid gap-x-5 gap-y-7 md:grid-cols-2 lg:grid-cols-[1.1fr_0.95fr_1.05fr_0.9fr]">
             {services.map((service, index) => (
               <MotionReveal key={service.slug} delay={index * 0.05}>
                 <ServiceCard {...service} />
@@ -132,7 +132,7 @@ export default function Home() {
           <div className="mt-12 grid gap-5 md:grid-cols-3">
             {projects.map((project, index) => (
               <ParallaxCard key={project.title} offset={10}>
-                <div className={`glass rounded-lg p-6 ${index === 1 ? "md:mt-10" : ""} ${index === 2 ? "md:-mt-4" : ""}`}>
+                <div className={`glass rounded-lg ${index === 0 ? "p-7" : "p-6"} ${index === 1 ? "md:mt-10" : ""} ${index === 2 ? "md:-mt-4 p-8" : ""}`}>
                   <p className="text-sm font-semibold uppercase tracking-[0.18em] text-aurora">{project.category}</p>
                   <h3 className="mt-5 text-2xl font-semibold text-white">{project.title}</h3>
                   <p className="mt-6 rounded-md bg-white/6 p-4 text-sm font-medium text-white/72">{project.result}</p>
@@ -150,7 +150,7 @@ export default function Home() {
           <SectionHeading eyebrow="Testimonials" title="Trusted by teams building their next chapter" />
           <div className="mt-12 grid gap-5 lg:grid-cols-[0.92fr_1.08fr_0.88fr]">
             {testimonials.map((testimonial, index) => (
-              <figure key={testimonial.name} className={`depth-card rounded-lg p-6 ${index === 0 ? "lg:mt-8" : ""} ${index === 2 ? "lg:mt-14" : ""}`}>
+              <figure key={testimonial.name} className={`depth-card rounded-lg ${index === 1 ? "p-8" : "p-6"} ${index === 0 ? "lg:mt-8" : ""} ${index === 2 ? "lg:mt-14" : ""}`}>
                 <blockquote className="leading-8 text-white/72">“{testimonial.quote}”</blockquote>
                 <figcaption className="mt-6">
                   <p className="font-semibold text-white">{testimonial.name}</p>
