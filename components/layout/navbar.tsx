@@ -59,7 +59,7 @@ export function Navbar() {
               {pathname === item.href ? (
                 <motion.span
                   layoutId="nav-active-underline"
-                  className="absolute inset-x-3 -bottom-1 h-px rounded-full bg-gradient-to-r from-aurora to-ember"
+                  className="absolute inset-x-3 -bottom-1 h-px rounded-full bg-white/32"
                   transition={{ duration: 0.32, ease: "easeInOut" }}
                 />
               ) : null}

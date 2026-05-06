@@ -31,7 +31,7 @@ export default function Home() {
               <MotionScaleIn delay={0.45}>
                 <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row">
                   <Button href="/contact">
-                    Let’s build something that works <ArrowRight aria-hidden className="ml-2 size-4" />
+                    Let&apos;s build something that works <ArrowRight aria-hidden className="ml-2 size-4" />
                   </Button>
                   <Button href="/services" variant="secondary">
                     Explore capabilities
@@ -160,7 +160,7 @@ export default function Home() {
           <div className="overflow-hidden rounded-lg bg-white/[0.045] p-8 sm:p-10 lg:p-12">
             <div className="max-w-3xl">
               <p className="text-sm font-semibold uppercase tracking-[0.22em] text-white/48">Ready when you are</p>
-              <h2 className="mt-4 max-w-2xl text-3xl font-semibold tracking-tight text-white sm:text-5xl">Let’s build the part of your business that keeps getting postponed.</h2>
+              <h2 className="mt-4 max-w-2xl text-3xl font-semibold tracking-tight text-white sm:text-5xl">Let&apos;s build the part of your business that keeps getting postponed.</h2>
               <p className="body-copy mt-6 max-w-2xl text-lg">
                 Bring the messy workflow, half-built idea, or growth bottleneck. We will help turn it into a useful first version.
               </p>

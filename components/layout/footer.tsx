@@ -14,11 +14,11 @@ export function Footer() {
   ];
 
   return (
-    <footer className="relative overflow-hidden border-t border-white/8 bg-[linear-gradient(180deg,rgba(239,68,68,0.055),rgba(0,0,0,0.34)_38%,rgba(0,0,0,0.48))] py-14">
-      <div aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-aurora/45 to-transparent" />
+    <footer className="relative overflow-hidden border-t border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.035),rgba(0,0,0,0.34)_38%,rgba(0,0,0,0.48))] py-14">
+      <div aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
       <Container>
         <MotionReveal>
-        <div className="grid gap-10 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
+          <div className="grid gap-10 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
           <div>
             <p className="text-xl font-semibold text-white">Aurentra Technologies</p>
             <p className="mt-4 max-w-md leading-7 text-white/58">
@@ -57,12 +57,12 @@ export function Footer() {
               ))}
             </div>
           </div>
-        </div>
+          </div>
         </MotionReveal>
         <div className="mt-10 flex flex-col gap-4 border-t border-white/8 pt-6 text-sm text-white/45 sm:flex-row sm:items-center sm:justify-between">
-          <p>Â© 2026 Aurentra Technologies. All rights reserved.</p>
+          <p>© 2026 Aurentra Technologies. All rights reserved.</p>
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-            <p>Amritanagar, Ettimadai, Tamil Nadu Â· Built for secure, scalable digital growth.</p>
+            <p>Amritanagar, Ettimadai, Tamil Nadu · Built for secure, scalable digital growth.</p>
             <BackToTop />
           </div>
         </div>
@@ -70,3 +70,4 @@ export function Footer() {
     </footer>
   );
 }
+

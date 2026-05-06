@@ -4,7 +4,7 @@ export function ProductVisuals() {
   return (
     <div className="grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
       <div className="ui-card ui-card-hover p-6">
-        <div className="flex items-center justify-between border-b border-white/8 pb-4">
+        <div className="flex items-center justify-between pb-4">
           <div>
             <p className="text-xs uppercase tracking-[0.2em] text-white/38">Ops Dashboard</p>
             <h3 className="mt-2 text-xl font-semibold text-white">Lead response snapshot</h3>

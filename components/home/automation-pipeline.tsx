@@ -14,9 +14,9 @@ export function AutomationPipeline() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <div className="glass relative rounded-lg p-5">
-      <div className="rounded-md border border-white/8 bg-black/28 p-5">
-        <div className="flex items-center justify-between border-b border-white/8 pb-4">
+    <div className="ui-card relative p-5">
+      <div className="rounded-md bg-black/20 p-5">
+        <div className="flex items-center justify-between pb-4">
           <div>
             <p className="text-sm text-white/45">Aurentra Growth OS</p>
             <p className="text-lg font-semibold text-white">Automation Pipeline</p>
@@ -34,12 +34,12 @@ export function AutomationPipeline() {
           {steps.map((step, index) => (
             <motion.div
               key={step.label}
-              className="flex items-center gap-4 rounded-md border border-white/8 bg-white/[0.03] p-4"
+              className="flex items-center gap-4 rounded-md bg-white/[0.028] p-4"
               initial={prefersReducedMotion ? false : { opacity: 0, y: 14 }}
               animate={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
               transition={{ duration: 0.56, delay: 0.18 + index * 0.15, ease: [0.22, 1, 0.36, 1] }}
             >
-              <span className="flex size-9 items-center justify-center rounded-md bg-aurora/15 text-sm font-semibold text-aurora">0{index + 1}</span>
+              <span className="flex size-9 items-center justify-center rounded-md bg-white/7 text-sm font-semibold text-white/72">0{index + 1}</span>
               <div className="flex-1">
                 <p className="font-medium text-white">{step.label}</p>
                 <div className="mt-2 h-2 overflow-hidden rounded-full bg-white/8">
