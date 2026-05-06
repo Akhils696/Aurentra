@@ -44,7 +44,7 @@ export function Navbar() {
               key={item.href}
               href={item.href}
               className={cn(
-                "relative rounded-md px-3 py-2 text-sm font-medium text-white/68 transition hover:text-white",
+                "hover-link relative rounded-md px-3 py-2 text-sm font-medium text-white/68 transition hover:text-white",
                 pathname === item.href && "text-white",
               )}
             >

@@ -79,11 +79,11 @@ export default function CareersPage() {
             />
             <form className="grid gap-4" aria-label="Career application form">
               <div className="grid gap-4 sm:grid-cols-2">
-                <input className="rounded-md border border-white/10 bg-black/22 px-4 py-3 text-white outline-none ring-aurora/40 placeholder:text-white/35 focus:ring-2" placeholder="Full name" aria-label="Full name" />
-                <input className="rounded-md border border-white/10 bg-black/22 px-4 py-3 text-white outline-none ring-aurora/40 placeholder:text-white/35 focus:ring-2" placeholder="Email address" type="email" aria-label="Email address" />
+                <input className="input-surface rounded-md border border-white/10 bg-black/22 px-4 py-3 text-white outline-none placeholder:text-white/35" placeholder="Full name" aria-label="Full name" />
+                <input className="input-surface rounded-md border border-white/10 bg-black/22 px-4 py-3 text-white outline-none placeholder:text-white/35" placeholder="Email address" type="email" aria-label="Email address" />
               </div>
-              <input className="rounded-md border border-white/10 bg-black/22 px-4 py-3 text-white outline-none ring-aurora/40 placeholder:text-white/35 focus:ring-2" placeholder="Role you are applying for" aria-label="Role" />
-              <textarea className="min-h-36 rounded-md border border-white/10 bg-black/22 px-4 py-3 text-white outline-none ring-aurora/40 placeholder:text-white/35 focus:ring-2" placeholder="Portfolio, resume link, and a short note" aria-label="Application message" />
+              <input className="input-surface rounded-md border border-white/10 bg-black/22 px-4 py-3 text-white outline-none placeholder:text-white/35" placeholder="Role you are applying for" aria-label="Role" />
+              <textarea className="input-surface min-h-36 rounded-md border border-white/10 bg-black/22 px-4 py-3 text-white outline-none placeholder:text-white/35" placeholder="Portfolio, resume link, and a short note" aria-label="Application message" />
               <Button type="submit">
                 Submit Application <Send aria-hidden className="ml-2 size-4" />
               </Button>

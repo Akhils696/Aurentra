@@ -115,6 +115,40 @@ p {
     0 16px 42px rgba(0, 0, 0, 0.24);
 }
 
+.hover-link {
+  position: relative;
+}
+
+.hover-link::after {
+  content: "";
+  position: absolute;
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: 0.35rem;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: rgba(255, 255, 255, 0.32);
+  transition: transform 260ms ease;
+}
+
+.hover-link:hover::after {
+  transform: scaleX(1);
+}
+
+.input-surface {
+  transition:
+    border-color 260ms ease,
+    background 260ms ease,
+    box-shadow 260ms ease;
+}
+
+.input-surface:focus {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.08);
+}
+
 .section-depth {
   position: relative;
   isolation: isolate;

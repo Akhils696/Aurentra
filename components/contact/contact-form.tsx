@@ -22,7 +22,7 @@ function FloatingField({
   multiline?: boolean;
 }) {
   const classes =
-    "peer w-full rounded-md border border-white/10 bg-black/22 px-4 pb-3 pt-6 text-white outline-none ring-aurora/40 transition placeholder:text-transparent focus:border-aurora/55 focus:shadow-[0_0_26px_rgba(239,68,68,0.12)] focus:ring-2";
+    "input-surface peer w-full rounded-md border border-white/10 bg-black/22 px-4 pb-3 pt-6 text-white outline-none placeholder:text-transparent";
   const labelClasses =
     "pointer-events-none absolute left-4 top-3 text-sm text-white/45 transition-all duration-200 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-white/35 peer-focus:top-3 peer-focus:text-sm peer-focus:text-aurora";
 
