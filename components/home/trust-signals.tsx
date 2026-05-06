@@ -23,7 +23,7 @@ export function TrustSignals() {
         </div>
         <div className="grid gap-3 md:grid-cols-3">
           {trustMetrics.map((metric) => (
-            <div key={metric.label} className="depth-card rounded-lg p-5">
+            <div key={metric.label} className="ui-card ui-card-hover p-5">
               <p className="text-2xl font-semibold text-white">{metric.value}</p>
               <p className="mt-2 text-sm leading-6 text-white/52">{metric.label}</p>
             </div>

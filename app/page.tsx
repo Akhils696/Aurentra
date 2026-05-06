@@ -120,7 +120,7 @@ export default function Home() {
           <div className="mt-12 grid gap-5 md:grid-cols-3">
             {projects.map((project, index) => (
               <ParallaxCard key={project.title} offset={10}>
-                <div className={`glass rounded-lg ${index === 0 ? "p-7" : "p-6"} ${index === 1 ? "md:mt-10" : ""} ${index === 2 ? "md:-mt-4 p-8" : ""}`}>
+                <div className={`ui-card ui-card-hover ${index === 0 ? "p-7" : "p-6"} ${index === 1 ? "md:mt-10" : ""} ${index === 2 ? "md:-mt-4 p-8" : ""}`}>
                   <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/42">{project.category}</p>
                   <h3 className="mt-5 text-2xl font-semibold text-white">{project.title}</h3>
                   <p className="mt-6 rounded-md bg-white/6 p-4 text-sm font-medium text-white/72">{project.result}</p>
@@ -138,7 +138,7 @@ export default function Home() {
           <SectionHeading eyebrow="Testimonials" title="Trusted by teams building their next chapter" />
           <div className="mt-12 grid gap-5 lg:grid-cols-[0.92fr_1.08fr_0.88fr]">
             {testimonials.map((testimonial, index) => (
-              <figure key={testimonial.name} className={`depth-card rounded-lg ${index === 1 ? "p-8" : "p-6"} ${index === 0 ? "lg:mt-8" : ""} ${index === 2 ? "lg:mt-14" : ""}`}>
+              <figure key={testimonial.name} className={`ui-card ${index === 1 ? "p-8" : "p-6"} ${index === 0 ? "lg:mt-8" : ""} ${index === 2 ? "lg:mt-14" : ""}`}>
                 <blockquote className="leading-8 text-white/72">“{testimonial.quote}”</blockquote>
                 <figcaption className="mt-6">
                   <p className="font-semibold text-white">{testimonial.name}</p>

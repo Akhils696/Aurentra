@@ -20,15 +20,15 @@ export function ServiceCardMotion({
 
   return (
     <motion.div
-      whileHover={prefersReducedMotion ? undefined : { y: -8 }}
+      whileHover={prefersReducedMotion ? undefined : { y: -3 }}
       transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
     >
       <Link
         href={href}
-        className="group relative block overflow-hidden rounded-lg border border-white/10 bg-white/[0.035] p-px shadow-[0_18px_70px_rgba(0,0,0,0.28)] backdrop-blur-[18px] transition duration-300 hover:shadow-[0_22px_80px_rgba(239,68,68,0.16)]"
+        className="group ui-card ui-card-hover relative block overflow-hidden p-6"
       >
-        <span className="pointer-events-none absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100 bg-[linear-gradient(135deg,rgba(239,68,68,0.65),rgba(249,115,22,0.26),rgba(255,255,255,0.08))]" />
-        <div className="relative h-full rounded-[7px] bg-graphite/80 p-6">
+        <span className="pointer-events-none absolute inset-x-0 top-0 h-px opacity-0 transition duration-300 group-hover:opacity-100 bg-gradient-to-r from-transparent via-white/28 to-transparent" />
+        <div className="relative h-full">
           <div className="mb-6 flex items-center justify-between">
             <AnimatedIcon className="flex size-12 items-center justify-center rounded-md bg-aurora/12 text-aurora">
               {icon}
