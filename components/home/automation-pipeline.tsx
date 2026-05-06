@@ -25,7 +25,7 @@ export function AutomationPipeline() {
             className="rounded-md bg-emerald-400/12 px-3 py-1 text-xs font-semibold text-emerald-200"
             initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.92 }}
             animate={prefersReducedMotion ? undefined : { opacity: 1, scale: 1 }}
-            transition={{ duration: 0.35, delay: 0.35, ease: "easeInOut" }}
+            transition={{ duration: 0.46, delay: 0.42, ease: "easeInOut" }}
           >
             Live
           </motion.span>
@@ -37,7 +37,7 @@ export function AutomationPipeline() {
               className="flex items-center gap-4 rounded-md border border-white/8 bg-white/[0.03] p-4"
               initial={prefersReducedMotion ? false : { opacity: 0, y: 14 }}
               animate={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
-              transition={{ duration: 0.45, delay: 0.12 + index * 0.13, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.56, delay: 0.18 + index * 0.15, ease: [0.22, 1, 0.36, 1] }}
             >
               <span className="flex size-9 items-center justify-center rounded-md bg-aurora/15 text-sm font-semibold text-aurora">0{index + 1}</span>
               <div className="flex-1">
@@ -47,7 +47,7 @@ export function AutomationPipeline() {
                     className="h-2 rounded-full bg-gradient-to-r from-aurora to-ember"
                     initial={prefersReducedMotion ? false : { width: 0 }}
                     animate={prefersReducedMotion ? undefined : { width: `${step.width}%` }}
-                    transition={{ duration: 0.85, delay: 0.28 + index * 0.13, ease: [0.45, 0, 0.2, 1] }}
+                    transition={{ duration: 0.96, delay: 0.36 + index * 0.15, ease: [0.45, 0, 0.2, 1] }}
                     style={prefersReducedMotion ? { width: `${step.width}%` } : undefined}
                   />
                 </div>
@@ -55,7 +55,7 @@ export function AutomationPipeline() {
               <motion.span
                 initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.5 }}
                 animate={prefersReducedMotion ? undefined : { opacity: 1, scale: 1 }}
-                transition={{ duration: 0.32, delay: 0.78 + index * 0.13, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 0.38, delay: 0.88 + index * 0.15, ease: [0.22, 1, 0.36, 1] }}
               >
                 <CheckCircle2 aria-hidden className="size-5 text-emerald-300" />
               </motion.span>
