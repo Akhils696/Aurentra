@@ -33,8 +33,8 @@ export default function Home() {
                   <Button href="/contact">
                     Let’s build something that works <ArrowRight aria-hidden className="ml-2 size-4" />
                   </Button>
-                  <Button href="/contact" variant="secondary">
-                    Tell us what’s stuck
+                  <Button href="/services" variant="secondary">
+                    Explore capabilities
                   </Button>
                 </div>
               </MotionScaleIn>
@@ -93,7 +93,9 @@ export default function Home() {
               title="Focused work, not a menu of buzzwords"
               copy="Most teams do not need more software. They need the right few systems connected well enough to save time, create clarity, and support growth."
             />
-            <Button href="/services" variant="secondary">View Services</Button>
+            <div className="flex flex-col gap-3 sm:flex-row md:justify-end">
+              <Button href="/services" variant="secondary">Explore capabilities</Button>
+            </div>
           </div>
           <div className="grid gap-x-5 gap-y-7 md:grid-cols-2 lg:grid-cols-[1.1fr_0.95fr_1.05fr_0.9fr]">
             {services.map((service, index) => (
@@ -128,6 +130,9 @@ export default function Home() {
               </ParallaxCard>
             ))}
           </div>
+          <div className="mt-10">
+            <Button href="/about" variant="ghost">See our process</Button>
+          </div>
         </Container>
       </section>
 
@@ -159,8 +164,9 @@ export default function Home() {
               <p className="body-copy mt-6 max-w-2xl text-lg">
                 Bring the messy workflow, half-built idea, or growth bottleneck. We will help turn it into a useful first version.
               </p>
-              <div className="mt-8">
-                <Button href="/contact">Let’s talk through the workflow</Button>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <Button href="/contact">Let&apos;s talk through the workflow</Button>
+                <Button href="/services" variant="secondary">See what we can build</Button>
               </div>
             </div>
           </div>
@@ -169,3 +175,4 @@ export default function Home() {
     </>
   );
 }
+
