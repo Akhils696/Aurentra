@@ -18,18 +18,18 @@ export default function Home() {
   return (
     <>
       <HeroParallax>
-        <Container className="grid items-center gap-16 lg:grid-cols-[1.12fr_0.88fr]">
+        <Container className="grid items-center gap-10 sm:gap-16 lg:grid-cols-[1.12fr_0.88fr]">
           <MotionReveal>
             <div>
               <p className="mb-5 inline-flex rounded-md border border-white/12 bg-white/[0.045] px-3 py-2 text-sm font-medium text-white/72">
                 Small team, practical systems, sharper growth
               </p>
               <HeroTitle />
-              <p className="body-copy mt-7 max-w-xl text-lg">
+              <p className="body-copy mt-6 max-w-xl text-base sm:mt-7 sm:text-lg">
                 We help teams replace slow manual work with clear digital systems: practical automations, sharper websites, and mobile workflows people can actually use.
               </p>
               <MotionScaleIn delay={0.45}>
-                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row">
                   <Button href="/contact">
                     Let’s build something that works <ArrowRight aria-hidden className="ml-2 size-4" />
                   </Button>
@@ -51,9 +51,9 @@ export default function Home() {
 
       <SectionDivider />
 
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <Container>
-          <p className="max-w-3xl text-2xl font-medium leading-10 text-white/78">
+          <p className="max-w-3xl text-xl font-medium leading-9 text-white/78 sm:text-2xl sm:leading-10">
             The work usually starts with one frustrating bottleneck: leads getting missed, teams copying data by hand, or a website that no longer reflects the business.
           </p>
         </Container>
@@ -69,7 +69,7 @@ export default function Home() {
 
       <SectionDivider />
 
-      <section className="py-20 sm:py-24">
+      <section className="py-16 sm:py-24">
         <Container>
           <div className="grid gap-12 lg:grid-cols-[0.42fr_0.58fr] lg:items-center">
             <SectionHeading
@@ -84,7 +84,7 @@ export default function Home() {
 
       <SectionDivider />
 
-      <section className="section-depth py-24 sm:py-28">
+      <section className="section-depth py-20 sm:py-28">
         <Container>
           <p className="quiet-label mb-8 max-w-xl font-semibold">How we turn that into momentum</p>
           <div className="mb-12 grid gap-8 md:grid-cols-[0.72fr_0.28fr] md:items-end">

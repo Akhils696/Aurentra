@@ -7,10 +7,10 @@ export function ParallaxCard({ children, offset = 16 }: { children: React.ReactN
   const ref = useRef<HTMLDivElement | null>(null);
   const prefersReducedMotion = useReducedMotion();
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
-  const y = useTransform(scrollYProgress, [0, 1], [offset, -offset]);
+  const y = useTransform(scrollYProgress, [0, 1], [offset * 0.65, -offset * 0.65]);
 
   return (
-    <motion.div ref={ref} style={prefersReducedMotion ? undefined : { y }}>
+    <motion.div ref={ref} className="motion-reduce:transform-none" style={prefersReducedMotion ? undefined : { y }}>
       {children}
     </motion.div>
   );
