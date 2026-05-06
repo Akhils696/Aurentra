@@ -51,7 +51,7 @@ export default function Home() {
 
       <SectionDivider />
 
-      <section className="py-12 sm:py-16">
+      <section className="ambient-section py-12 sm:py-16">
         <Container>
           <p className="max-w-3xl text-xl font-medium leading-9 text-white/78 sm:text-2xl sm:leading-10">
             The work usually starts with one frustrating bottleneck: leads getting missed, teams copying data by hand, or a website that no longer reflects the business.
@@ -69,7 +69,7 @@ export default function Home() {
 
       <SectionDivider />
 
-      <section className="py-16 sm:py-24">
+      <section className="ambient-section py-16 sm:py-24" data-light="right">
         <Container>
           <div className="grid gap-12 lg:grid-cols-[0.42fr_0.58fr] lg:items-center">
             <SectionHeading
@@ -84,7 +84,7 @@ export default function Home() {
 
       <SectionDivider />
 
-      <section className="section-depth py-20 sm:py-28">
+      <section className="ambient-section section-depth py-20 sm:py-28">
         <Container>
           <p className="quiet-label mb-8 max-w-xl font-semibold">How we turn that into momentum</p>
           <div className="mb-12 grid gap-8 md:grid-cols-[0.72fr_0.28fr] md:items-end">
@@ -107,7 +107,7 @@ export default function Home() {
 
       <SectionDivider />
 
-      <section className="section-depth py-24 sm:py-28">
+      <section className="ambient-section section-depth py-24 sm:py-28" data-light="right">
         <Container>
           <p className="quiet-label mb-8 ml-auto max-w-xl font-semibold">The result is not just a launch, but a calmer operating rhythm</p>
           <div className="ml-auto max-w-4xl">
