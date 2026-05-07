@@ -64,7 +64,9 @@ export default function Home() {
 
       <section className="py-14 sm:py-16">
         <Container>
-          <TrustSignals />
+          <div className="poster-panel">
+            <TrustSignals />
+          </div>
         </Container>
       </section>
 
@@ -72,7 +74,7 @@ export default function Home() {
 
       <section className="ambient-section cinematic-red-glow py-16 sm:py-24" data-light="right">
         <Container>
-          <div className="grid gap-12 lg:grid-cols-[0.42fr_0.58fr] lg:items-center">
+          <div className="poster-panel grid gap-12 lg:grid-cols-[0.42fr_0.58fr] lg:items-center">
             <SectionHeading
               eyebrow="Use Case"
               title="A real workflow your team can point at"
@@ -87,6 +89,7 @@ export default function Home() {
 
       <section className="ambient-section cinematic-red-glow section-depth py-20 sm:py-28">
         <Container>
+          <div className="poster-panel">
           <p className="quiet-label mb-8 max-w-xl font-semibold">How we turn that into momentum</p>
           <div className="mb-12 grid gap-8 md:grid-cols-[0.72fr_0.28fr] md:items-end">
             <SectionHeading
@@ -99,6 +102,7 @@ export default function Home() {
             </div>
           </div>
           <PremiumServices />
+          </div>
         </Container>
       </section>
 
