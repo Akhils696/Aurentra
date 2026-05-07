@@ -31,9 +31,9 @@ export function BackgroundMotion() {
         animate={prefersReducedMotion ? undefined : { backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
         transition={{ duration: 28, repeat: Infinity, ease: "easeInOut" }}
       />
-      <div className="ambient-noise absolute inset-0 opacity-[0.035]" />
+      <div className="ambient-noise absolute inset-0 opacity-[0.05]" />
       <motion.div
-        className="absolute inset-0 opacity-[0.045] [background-image:linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:76px_76px]"
+        className="absolute inset-0 opacity-[0.035] [background-image:linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:84px_84px]"
         style={prefersReducedMotion ? undefined : { backgroundPositionX: springX, backgroundPositionY: springY }}
       />
     </div>
