@@ -2,14 +2,14 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 
-const words = ["Transforming", "Businesses", "with"];
+const words = ["Digital", "Solutions"];
 
 export function HeroTitle() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <h1 className="premium-heading max-w-5xl text-[2.85rem] font-semibold leading-[0.98] text-white sm:text-6xl lg:text-7xl">
-      <span className="inline-flex flex-wrap gap-x-3 gap-y-2 sm:gap-x-4">
+    <h1 className="premium-heading max-w-5xl text-[4rem] font-black uppercase leading-[0.86] text-white sm:text-7xl lg:text-8xl">
+      <span className="inline-flex flex-wrap gap-x-4 gap-y-3 sm:gap-x-5">
         {words.map((word, index) => (
           <motion.span
             key={word}
@@ -27,7 +27,7 @@ export function HeroTitle() {
           animate={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.68, delay: words.length * 0.09, ease: [0.22, 1, 0.36, 1] }}
         >
-          AI & Digital Solutions
+          That Drive Real Growth
         </motion.span>
       </span>
     </h1>
