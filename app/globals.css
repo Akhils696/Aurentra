@@ -43,6 +43,18 @@ body::before {
     radial-gradient(circle at 50% 120%, rgba(239, 61, 61, 0.12), transparent 35rem);
 }
 
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 20;
+  background:
+    radial-gradient(circle at center, transparent 48%, rgba(0, 0, 0, 0.34) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent 16%, transparent 82%, rgba(0, 0, 0, 0.26));
+  mix-blend-mode: multiply;
+}
+
 h1,
 h2,
 h3 {
@@ -206,6 +218,24 @@ p {
   background: radial-gradient(circle, rgba(148, 163, 184, 0.075), transparent 66%);
 }
 
+.cinematic-red-glow {
+  position: relative;
+  isolation: isolate;
+}
+
+.cinematic-red-glow::after {
+  content: "";
+  position: absolute;
+  inset: auto 8% -10% auto;
+  z-index: -1;
+  width: min(34rem, 72vw);
+  height: min(34rem, 72vw);
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(239, 61, 61, 0.2), transparent 66%);
+  filter: blur(40px);
+  opacity: 0.75;
+}
+
 .poster-device-wrap {
   filter: drop-shadow(0 28px 80px rgba(0, 0, 0, 0.5));
 }
@@ -222,7 +252,24 @@ p {
   filter: blur(34px);
 }
 
+.device-frame {
+  position: relative;
+  overflow: hidden;
+}
+
+.device-frame::before,
+.premium-feature-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.1) 42%, transparent 48%);
+  opacity: 0.28;
+}
+
 .premium-feature-panel {
+  position: relative;
+  overflow: hidden;
   border-radius: 14px;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.018) 45%, rgba(239, 61, 61, 0.04)),

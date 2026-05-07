@@ -69,7 +69,7 @@ export default function Home() {
 
       <SectionDivider />
 
-      <section className="ambient-section py-16 sm:py-24" data-light="right">
+      <section className="ambient-section cinematic-red-glow py-16 sm:py-24" data-light="right">
         <Container>
           <div className="grid gap-12 lg:grid-cols-[0.42fr_0.58fr] lg:items-center">
             <SectionHeading
@@ -84,7 +84,7 @@ export default function Home() {
 
       <SectionDivider />
 
-      <section className="ambient-section section-depth py-20 sm:py-28">
+      <section className="ambient-section cinematic-red-glow section-depth py-20 sm:py-28">
         <Container>
           <p className="quiet-label mb-8 max-w-xl font-semibold">How we turn that into momentum</p>
           <div className="mb-12 grid gap-8 md:grid-cols-[0.72fr_0.28fr] md:items-end">
@@ -149,7 +149,7 @@ export default function Home() {
         </Container>
       </section>
 
-      <section className="pb-24 pt-12 sm:pb-28">
+      <section className="cinematic-red-glow pb-24 pt-12 sm:pb-28">
         <Container>
           <div className="overflow-hidden rounded-lg bg-white/[0.045] p-8 sm:p-10 lg:p-12">
             <div className="max-w-3xl">
