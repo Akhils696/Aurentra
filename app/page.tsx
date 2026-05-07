@@ -155,12 +155,12 @@ export default function Home() {
 
       <section className="cinematic-red-glow pb-24 pt-12 sm:pb-28">
         <Container>
-          <div className="overflow-hidden rounded-lg bg-white/[0.045] p-8 sm:p-10 lg:p-12">
-            <div className="max-w-3xl">
+          <div className="poster-cta p-8 sm:p-10 lg:p-14">
+            <div className="relative max-w-4xl">
               <p className="text-sm font-semibold uppercase tracking-[0.22em] text-white/48">Ready when you are</p>
-              <h2 className="mt-4 max-w-2xl text-3xl font-semibold tracking-tight text-white sm:text-5xl">Let&apos;s build the part of your business that keeps getting postponed.</h2>
+              <h2 className="mt-4 max-w-3xl text-4xl font-black uppercase tracking-tight text-white sm:text-6xl">Let&apos;s Build Something Extraordinary Together.</h2>
               <p className="body-copy mt-6 max-w-2xl text-lg">
-                Bring the messy workflow, half-built idea, or growth bottleneck. We will help turn it into a useful first version.
+                Bring the workflow, brand, or product idea that deserves a sharper digital system. We will help shape it into something you can launch with confidence.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Button href="/contact">Let&apos;s talk through the workflow</Button>
