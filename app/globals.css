@@ -286,6 +286,18 @@ p {
     0 18px 60px rgba(0, 0, 0, 0.28);
 }
 
+.device-laptop,
+.device-mobile {
+  filter: drop-shadow(0 22px 54px rgba(0, 0, 0, 0.42));
+}
+
+.device-mobile {
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.018)), #050914;
+  padding: 1rem;
+}
+
 .gradient-text {
   background: linear-gradient(135deg, #ffffff 12%, #d7dde8 52%, #fca5a5 100%);
   background-size: 160% 160%;

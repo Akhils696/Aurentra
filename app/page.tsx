@@ -12,6 +12,7 @@ import { MotionScaleIn } from "@/components/ui/motion-scale-in";
 import { SectionDivider } from "@/components/ui/section-divider";
 import { ParallaxCard } from "@/components/ui/parallax-card";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { LaptopMockup, MobileMockup } from "@/components/ui/device-mockups";
 import { projects, testimonials } from "@/lib/site-data";
 
 export default function Home() {
@@ -117,8 +118,7 @@ export default function Home() {
             {projects.map((project, index) => (
               <ParallaxCard key={project.title} offset={10}>
                 <div className={`ui-card ui-card-hover ${index === 0 ? "p-7" : "p-6"} ${index === 1 ? "md:mt-10" : ""} ${index === 2 ? "md:-mt-4 p-8" : ""}`}>
-                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/42">{project.category}</p>
-                  <h3 className="mt-5 text-2xl font-semibold text-white">{project.title}</h3>
+                  {index === 2 ? <MobileMockup label={project.category} /> : <LaptopMockup title={project.title} meta={project.category} />}
                   <p className="mt-6 rounded-md bg-white/6 p-4 text-sm font-medium text-white/72">{project.result}</p>
                 </div>
               </ParallaxCard>
