@@ -3,6 +3,7 @@ import { HeroDeviceVisual } from "@/components/home/hero-device-visual";
 import { HeroParallax } from "@/components/home/hero-parallax";
 import { HeroTitle } from "@/components/home/hero-title";
 import { ProductVisuals } from "@/components/home/product-visuals";
+import { PremiumServices } from "@/components/home/premium-services";
 import { TrustSignals } from "@/components/home/trust-signals";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -11,8 +12,7 @@ import { MotionScaleIn } from "@/components/ui/motion-scale-in";
 import { SectionDivider } from "@/components/ui/section-divider";
 import { ParallaxCard } from "@/components/ui/parallax-card";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { ServiceCard } from "@/components/ui/service-card";
-import { projects, services, testimonials } from "@/lib/site-data";
+import { projects, testimonials } from "@/lib/site-data";
 
 export default function Home() {
   return (
@@ -97,13 +97,7 @@ export default function Home() {
               <Button href="/services" variant="secondary">Explore capabilities</Button>
             </div>
           </div>
-          <div className="grid gap-x-5 gap-y-7 md:grid-cols-2 lg:grid-cols-[1.1fr_0.95fr_1.05fr_0.9fr]">
-            {services.map((service, index) => (
-              <MotionReveal key={service.slug} delay={index * 0.05}>
-                <ServiceCard {...service} />
-              </MotionReveal>
-            ))}
-          </div>
+          <PremiumServices />
         </Container>
       </section>
 
