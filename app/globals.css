@@ -206,6 +206,22 @@ p {
   background: radial-gradient(circle, rgba(148, 163, 184, 0.075), transparent 66%);
 }
 
+.poster-device-wrap {
+  filter: drop-shadow(0 28px 80px rgba(0, 0, 0, 0.5));
+}
+
+.poster-device-glow {
+  position: absolute;
+  inset: -12% -8% auto auto;
+  width: 75%;
+  height: 82%;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle, rgba(239, 61, 61, 0.28), transparent 58%),
+    radial-gradient(circle at 70% 20%, rgba(75, 105, 170, 0.18), transparent 62%);
+  filter: blur(34px);
+}
+
 .gradient-text {
   background: linear-gradient(135deg, #ffffff 12%, #d7dde8 52%, #fca5a5 100%);
   background-size: 160% 160%;

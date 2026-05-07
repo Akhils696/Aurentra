@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import { AutomationPipeline } from "@/components/home/automation-pipeline";
+import { HeroDeviceVisual } from "@/components/home/hero-device-visual";
 import { HeroParallax } from "@/components/home/hero-parallax";
 import { HeroTitle } from "@/components/home/hero-title";
 import { ProductVisuals } from "@/components/home/product-visuals";
@@ -18,15 +18,15 @@ export default function Home() {
   return (
     <>
       <HeroParallax>
-        <Container className="grid items-center gap-10 sm:gap-16 lg:grid-cols-[1.12fr_0.88fr]">
+        <Container className="grid items-center gap-12 sm:gap-16 lg:grid-cols-[0.92fr_1.08fr]">
           <MotionReveal>
             <div>
               <p className="mb-5 inline-flex rounded-md border border-white/12 bg-white/[0.045] px-3 py-2 text-sm font-medium text-white/72">
                 Small team, practical systems, sharper growth
               </p>
               <HeroTitle />
-              <p className="body-copy mt-6 max-w-xl text-base sm:mt-7 sm:text-lg">
-                We help teams replace slow manual work with clear digital systems: practical automations, sharper websites, and mobile workflows people can actually use.
+              <p className="body-copy mt-6 max-w-2xl text-base sm:mt-7 sm:text-xl">
+                We design AI-ready websites, apps, and automation systems that make your business look sharper, move faster, and convert more of the right opportunities.
               </p>
               <MotionScaleIn delay={0.45}>
                 <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row">
@@ -43,7 +43,7 @@ export default function Home() {
 
           <MotionReveal delay={0.12}>
             <div className="lg:translate-y-8">
-            <AutomationPipeline />
+              <HeroDeviceVisual />
             </div>
           </MotionReveal>
         </Container>
