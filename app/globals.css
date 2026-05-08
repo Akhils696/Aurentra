@@ -100,6 +100,58 @@ p {
   mask-image: linear-gradient(to bottom, transparent, black 18%, black 78%, transparent);
 }
 
+.cinematic-skyline {
+  position: absolute;
+  inset: auto -6% 0;
+  height: 42vh;
+  opacity: 0.42;
+  background:
+    linear-gradient(to top, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.16) 68%, transparent),
+    linear-gradient(90deg, transparent 0 4%, #050712 4% 7%, transparent 7% 10%, #070a12 10% 14%, transparent 14% 18%, #03050b 18% 23%, transparent 23% 30%, #060915 30% 36%, transparent 36% 41%, #050812 41% 45%, transparent 45% 51%, #080b15 51% 58%, transparent 58% 64%, #04060d 64% 70%, transparent 70% 76%, #070a12 76% 82%, transparent 82% 100%);
+  filter: blur(0.2px);
+}
+
+.cinematic-fog {
+  position: absolute;
+  left: -12%;
+  right: -12%;
+  height: 32vh;
+  background: linear-gradient(90deg, transparent, rgba(120, 140, 180, 0.14), rgba(239, 61, 61, 0.1), transparent);
+  filter: blur(32px);
+}
+
+.fog-one {
+  bottom: 18vh;
+}
+
+.fog-two {
+  bottom: 2vh;
+}
+
+.cinematic-particles {
+  position: absolute;
+  inset: 0;
+  opacity: 0.16;
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.5) 0 1px, transparent 1.4px),
+    radial-gradient(circle, rgba(239, 61, 61, 0.42) 0 1px, transparent 1.2px);
+  background-size: 120px 120px, 180px 180px;
+  background-position: 18px 40px, 80px 10px;
+}
+
+.reflective-floor {
+  position: absolute;
+  inset: auto 0 0;
+  height: 34vh;
+  background:
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035), transparent 34%),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0 1px, transparent 1px 80px),
+    linear-gradient(180deg, transparent, rgba(239, 61, 61, 0.055));
+  transform: perspective(700px) rotateX(64deg);
+  transform-origin: bottom;
+  opacity: 0.28;
+}
+
 ::selection {
   background: rgba(239, 68, 68, 0.45);
 }

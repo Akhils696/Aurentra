@@ -26,11 +26,24 @@ export function BackgroundMotion() {
 
   return (
     <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+      <div className="cinematic-skyline" />
+      <motion.div
+        className="cinematic-fog fog-one"
+        animate={prefersReducedMotion ? undefined : { x: ["-6%", "4%", "-6%"], opacity: [0.18, 0.3, 0.18] }}
+        transition={{ duration: 24, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="cinematic-fog fog-two"
+        animate={prefersReducedMotion ? undefined : { x: ["5%", "-4%", "5%"], opacity: [0.12, 0.24, 0.12] }}
+        transition={{ duration: 31, repeat: Infinity, ease: "easeInOut" }}
+      />
       <motion.div
         className="ambient-mesh absolute inset-0 opacity-60"
         animate={prefersReducedMotion ? undefined : { backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
         transition={{ duration: 28, repeat: Infinity, ease: "easeInOut" }}
       />
+      <div className="cinematic-particles" />
+      <div className="reflective-floor" />
       <div className="ambient-noise absolute inset-0 opacity-[0.05]" />
       <motion.div
         className="absolute inset-0 opacity-[0.035] [background-image:linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:84px_84px]"
