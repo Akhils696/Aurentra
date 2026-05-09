@@ -623,12 +623,25 @@ p {
 }
 
 .shimmer-text {
-  background: linear-gradient(110deg, #ffffff 0%, #e5e7eb 28%, #fca5a5 48%, #ffffff 62%, #d1d5db 100%);
+  background: linear-gradient(110deg, #ffffff 0%, #e5e7eb 25%, #ff4d4d 48%, #ffffff 62%, #b9c4d8 100%);
   background-size: 220% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   animation: shimmer-gradient 5.5s ease-in-out infinite;
+}
+
+.cinematic-headline {
+  text-shadow:
+    0 0 32px rgba(255, 255, 255, 0.08),
+    0 0 64px rgba(239, 61, 61, 0.12);
+}
+
+.glow-keyword {
+  color: #fff;
+  text-shadow:
+    0 0 18px rgba(239, 61, 61, 0.55),
+    0 0 52px rgba(239, 61, 61, 0.28);
 }
 
 @keyframes shimmer-gradient {
