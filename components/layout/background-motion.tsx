@@ -2,6 +2,7 @@
 
 import { motion, useMotionValue, useReducedMotion, useSpring } from "framer-motion";
 import { useEffect } from "react";
+import { BrandGeometry } from "@/components/layout/brand-geometry";
 
 export function BackgroundMotion() {
   const prefersReducedMotion = useReducedMotion();
@@ -27,6 +28,7 @@ export function BackgroundMotion() {
   return (
     <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
       <div className="cinematic-skyline" />
+      <BrandGeometry variant="hero" />
       <motion.div
         className="cinematic-fog fog-one"
         animate={prefersReducedMotion ? undefined : { x: ["-6%", "4%", "-6%"], opacity: [0.18, 0.3, 0.18] }}

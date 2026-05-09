@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import { BrandGeometry } from "@/components/layout/brand-geometry";
 
 export function SectionDivider() {
   const prefersReducedMotion = useReducedMotion();
@@ -17,6 +18,7 @@ export function SectionDivider() {
         animate={prefersReducedMotion ? undefined : { opacity: [0.18, 0.42, 0.18] }}
         transition={{ duration: 8.5, repeat: Infinity, ease: "easeInOut" }}
       />
+      <BrandGeometry variant="section" />
     </div>
   );
 }

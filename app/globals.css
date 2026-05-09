@@ -152,6 +152,57 @@ p {
   opacity: 0.28;
 }
 
+.brand-geometry {
+  position: absolute;
+  pointer-events: none;
+  transform-style: preserve-3d;
+}
+
+.brand-geometry-hero {
+  right: -5vw;
+  top: 9vh;
+  width: min(34rem, 48vw);
+  height: min(34rem, 48vw);
+  opacity: 0.34;
+  transform: rotate(-8deg) skewY(-2deg);
+}
+
+.brand-geometry-section {
+  left: calc(50% - 11px);
+  top: -18px;
+  width: 34px;
+  height: 34px;
+  opacity: 0.42;
+  transform: rotate(45deg);
+}
+
+.triangle-shell,
+.triangle-core,
+.triangle-shadow {
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(50% 4%, 96% 92%, 4% 92%);
+}
+
+.triangle-shell {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.02) 46%, rgba(239, 61, 61, 0.18));
+  filter: drop-shadow(0 34px 80px rgba(0, 0, 0, 0.52));
+}
+
+.triangle-core {
+  inset: 18%;
+  background: linear-gradient(180deg, rgba(239, 61, 61, 0.68), rgba(89, 12, 20, 0.2));
+  opacity: 0.78;
+}
+
+.triangle-shadow {
+  inset: 10%;
+  transform: translateY(16%) scale(1.08);
+  background: rgba(0, 0, 0, 0.42);
+  filter: blur(18px);
+  opacity: 0.58;
+}
+
 ::selection {
   background: rgba(239, 68, 68, 0.45);
 }
