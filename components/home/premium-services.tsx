@@ -8,7 +8,7 @@ export function PremiumServices() {
       {services.map((service, index) => {
         const Icon = customServiceIcons[service.slug as keyof typeof customServiceIcons] ?? service.icon;
         return (
-          <article key={service.slug} className={`premium-feature-panel grid gap-6 p-6 lg:grid-cols-[0.42fr_0.58fr] lg:items-center ${index % 2 ? "lg:[&>*:first-child]:order-2" : ""}`}>
+          <article key={service.slug} className={`premium-feature-panel metal-edge grid gap-6 p-6 lg:grid-cols-[0.42fr_0.58fr] lg:items-center ${index % 2 ? "lg:[&>*:first-child]:order-2" : ""}`}>
             <div>
               <div className="flex size-12 items-center justify-center rounded-md bg-white/8 text-white">
                 <Icon aria-hidden className="size-6" />
