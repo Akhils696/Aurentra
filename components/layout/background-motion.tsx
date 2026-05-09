@@ -30,6 +30,16 @@ export function BackgroundMotion() {
       <div className="cinematic-skyline" />
       <BrandGeometry variant="hero" />
       <motion.div
+        className="dynamic-red-light light-a"
+        animate={prefersReducedMotion ? undefined : { x: ["-8%", "8%", "-8%"], y: ["0%", "6%", "0%"], opacity: [0.26, 0.44, 0.26] }}
+        transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="dynamic-red-light light-b"
+        animate={prefersReducedMotion ? undefined : { x: ["6%", "-6%", "6%"], y: ["4%", "-3%", "4%"], opacity: [0.18, 0.34, 0.18] }}
+        transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
         className="cinematic-fog fog-one"
         animate={prefersReducedMotion ? undefined : { x: ["-6%", "4%", "-6%"], opacity: [0.18, 0.3, 0.18] }}
         transition={{ duration: 24, repeat: Infinity, ease: "easeInOut" }}

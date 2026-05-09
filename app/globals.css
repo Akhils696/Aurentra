@@ -184,6 +184,49 @@ p {
   clip-path: polygon(50% 4%, 96% 92%, 4% 92%);
 }
 
+.dynamic-red-light {
+  position: absolute;
+  width: min(34rem, 70vw);
+  height: min(34rem, 70vw);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle, rgba(239, 61, 61, 0.34), transparent 58%),
+    radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.08), transparent 48%);
+  filter: blur(46px);
+  mix-blend-mode: screen;
+}
+
+.light-a {
+  top: 10vh;
+  left: -10vw;
+}
+
+.light-b {
+  right: -12vw;
+  bottom: 6vh;
+  background:
+    radial-gradient(circle, rgba(239, 61, 61, 0.24), transparent 62%),
+    radial-gradient(circle at 30% 20%, rgba(52, 78, 135, 0.18), transparent 54%);
+}
+
+.ui-card,
+.premium-feature-panel,
+.poster-panel,
+.device-frame {
+  position: relative;
+}
+
+.ui-card::after,
+.device-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: radial-gradient(circle at var(--light-x, 78%) var(--light-y, 12%), rgba(255, 255, 255, 0.12), transparent 32%);
+  opacity: 0.45;
+}
+
 .triangle-shell {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.02) 46%, rgba(239, 61, 61, 0.18));
   filter: drop-shadow(0 34px 80px rgba(0, 0, 0, 0.52));
