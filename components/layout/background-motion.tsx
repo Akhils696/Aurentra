@@ -50,6 +50,11 @@ export function BackgroundMotion() {
         transition={{ duration: 31, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
+        className="atmospheric-sweep"
+        animate={prefersReducedMotion ? undefined : { x: ["-35%", "35%", "-35%"], opacity: [0.05, 0.16, 0.05] }}
+        transition={{ duration: 34, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
         className="ambient-mesh absolute inset-0 opacity-60"
         animate={prefersReducedMotion ? undefined : { backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
         transition={{ duration: 28, repeat: Infinity, ease: "easeInOut" }}
