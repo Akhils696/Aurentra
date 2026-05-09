@@ -432,6 +432,11 @@ p {
   opacity: 0.75;
 }
 
+.scene-section {
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
 .poster-device-wrap {
   filter: drop-shadow(0 28px 80px rgba(0, 0, 0, 0.5));
 }

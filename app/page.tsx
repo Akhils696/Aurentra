@@ -13,6 +13,7 @@ import { SectionDivider } from "@/components/ui/section-divider";
 import { ParallaxCard } from "@/components/ui/parallax-card";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { LaptopMockup, MobileMockup } from "@/components/ui/device-mockups";
+import { SceneSection } from "@/components/ui/scene-section";
 import { projects, testimonials } from "@/lib/site-data";
 
 export default function Home() {
@@ -52,27 +53,27 @@ export default function Home() {
 
       <SectionDivider />
 
-      <section className="ambient-section py-12 sm:py-16">
+      <SceneSection className="ambient-section py-12 sm:py-16">
         <Container>
           <p className="max-w-3xl text-xl font-medium leading-9 text-white/78 sm:text-2xl sm:leading-10">
             The work usually starts with one frustrating bottleneck: leads getting missed, teams copying data by hand, or a website that no longer reflects the business.
           </p>
         </Container>
-      </section>
+      </SceneSection>
 
       <SectionDivider />
 
-      <section className="py-14 sm:py-16">
+      <SceneSection className="py-14 sm:py-16">
         <Container>
           <div className="poster-panel metal-edge">
             <TrustSignals />
           </div>
         </Container>
-      </section>
+      </SceneSection>
 
       <SectionDivider />
 
-      <section className="ambient-section cinematic-red-glow py-16 sm:py-24" data-light="right">
+      <SceneSection className="ambient-section cinematic-red-glow py-16 sm:py-24" data-light="right">
         <Container>
           <div className="poster-panel metal-edge grid gap-12 lg:grid-cols-[0.42fr_0.58fr] lg:items-center">
             <SectionHeading
@@ -83,7 +84,7 @@ export default function Home() {
             <ProductVisuals />
           </div>
         </Container>
-      </section>
+      </SceneSection>
 
       <SectionDivider />
 
