@@ -400,6 +400,36 @@ p {
   filter: drop-shadow(0 28px 80px rgba(0, 0, 0, 0.5));
 }
 
+.cinematic-hero-scene {
+  min-height: calc(100svh - 5rem);
+  display: grid;
+  align-items: center;
+}
+
+.hero-scene-skyline {
+  position: absolute;
+  inset: auto -4% 3%;
+  z-index: -1;
+  height: 36%;
+  opacity: 0.55;
+  background:
+    linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent 70%),
+    linear-gradient(90deg, transparent 0 5%, rgba(10, 15, 28, 0.9) 5% 8%, transparent 8% 12%, rgba(8, 13, 25, 0.85) 12% 16%, transparent 16% 24%, rgba(5, 8, 16, 0.95) 24% 29%, transparent 29% 36%, rgba(10, 15, 28, 0.78) 36% 44%, transparent 44% 52%, rgba(7, 11, 21, 0.92) 52% 59%, transparent 59% 67%, rgba(8, 13, 24, 0.86) 67% 73%, transparent 73% 100%);
+}
+
+.hero-reflective-ground {
+  position: absolute;
+  inset: auto 0 -18%;
+  z-index: -1;
+  height: 38%;
+  background:
+    radial-gradient(ellipse at center, rgba(239, 61, 61, 0.16), transparent 48%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent 45%);
+  transform: perspective(900px) rotateX(68deg);
+  transform-origin: bottom;
+  opacity: 0.52;
+}
+
 .poster-device-glow {
   position: absolute;
   inset: -12% -8% auto auto;

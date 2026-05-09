@@ -2,9 +2,9 @@ import { Activity, ArrowUpRight, CheckCircle2 } from "lucide-react";
 
 export function HeroDeviceVisual() {
   return (
-    <div className="poster-device-wrap relative">
+    <div className="poster-device-wrap relative perspective-[1200px]">
       <div className="poster-device-glow" />
-      <div className="device-frame relative mx-auto max-w-xl rotate-[-2deg] rounded-[18px] border border-white/12 bg-[#050914] p-3 shadow-[0_38px_120px_rgba(0,0,0,0.58)]">
+      <div className="device-frame relative mx-auto max-w-xl rotate-[-2deg] rounded-[18px] border border-white/12 bg-[#050914] p-3 shadow-[0_38px_120px_rgba(0,0,0,0.58)] lg:translate-z-6">
         <div className="rounded-[12px] border border-white/8 bg-[linear-gradient(145deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02)),#070b15] p-5">
           <div className="flex items-center justify-between">
             <div>
