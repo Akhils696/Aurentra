@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { PageTransition } from "@/components/layout/page-transition";
 import { Preloader } from "@/components/layout/preloader";
+import { SignatureLayer } from "@/components/layout/signature-layer";
 import { SmoothScroll } from "@/components/layout/smooth-scroll";
 import "./globals.css";
 
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body className={`${inter.variable} font-sans antialiased`}>
         <BackgroundMotion />
+        <SignatureLayer />
         <Preloader />
         <CursorSystem />
         <SmoothScroll />

@@ -644,6 +644,69 @@ p {
     0 0 52px rgba(239, 61, 61, 0.28);
 }
 
+.signature-layer {
+  mix-blend-mode: screen;
+}
+
+.signature-triangle {
+  position: absolute;
+  width: 18rem;
+  height: 18rem;
+  clip-path: polygon(50% 0, 100% 92%, 0 92%);
+  border: 1px solid rgba(239, 61, 61, 0.2);
+  background: linear-gradient(180deg, rgba(239, 61, 61, 0.1), transparent 68%);
+  filter: blur(0.2px) drop-shadow(0 0 34px rgba(239, 61, 61, 0.16));
+  opacity: 0.28;
+}
+
+.signature-triangle-a {
+  left: 7vw;
+  top: 42vh;
+  transform: rotate(-18deg);
+}
+
+.signature-triangle-b {
+  right: 8vw;
+  top: 138vh;
+  transform: rotate(14deg) scale(0.82);
+}
+
+.signature-frame {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  border-color: rgba(255, 255, 255, 0.12);
+  opacity: 0.42;
+}
+
+.frame-top-left {
+  left: 2rem;
+  top: 8rem;
+  border-left: 1px solid;
+  border-top: 1px solid;
+}
+
+.frame-bottom-right {
+  right: 2rem;
+  top: 115vh;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.signature-grid {
+  position: absolute;
+  inset: 52vh 0 auto;
+  height: 46vh;
+  opacity: 0.12;
+  background-image:
+    linear-gradient(rgba(239, 61, 61, 0.22) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.16) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse at center, black 0%, transparent 68%);
+  transform: perspective(900px) rotateX(62deg);
+  transform-origin: bottom;
+}
+
 @keyframes shimmer-gradient {
   0%,
   28% {
