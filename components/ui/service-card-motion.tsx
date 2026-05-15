@@ -1,9 +1,10 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useMotionValue, useReducedMotion, useSpring, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { AnimatedIcon } from "@/components/ui/animated-icon";
+import { hoverSpring } from "@/lib/motion";
 
 export function ServiceCardMotion({
   href,
@@ -17,11 +18,27 @@ export function ServiceCardMotion({
   icon: React.ReactNode;
 }) {
   const prefersReducedMotion = useReducedMotion();
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const springX = useSpring(x, hoverSpring);
+  const springY = useSpring(y, hoverSpring);
+  const rotateX = useTransform(springY, [-80, 80], [2.5, -2.5]);
+  const rotateY = useTransform(springX, [-80, 80], [-2.5, 2.5]);
 
   return (
     <motion.div
       whileHover={prefersReducedMotion ? undefined : { y: -3 }}
       transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+      style={prefersReducedMotion ? undefined : { rotateX, rotateY, transformPerspective: 900 }}
+      onMouseMove={(event) => {
+        const rect = event.currentTarget.getBoundingClientRect();
+        x.set(event.clientX - rect.left - rect.width / 2);
+        y.set(event.clientY - rect.top - rect.height / 2);
+      }}
+      onMouseLeave={() => {
+        x.set(0);
+        y.set(0);
+      }}
     >
       <Link
         href={href}
