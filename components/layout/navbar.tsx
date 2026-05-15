@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { navItems } from "@/lib/site-data";
@@ -25,8 +25,10 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 border-b transition-all duration-300",
-        scrolled ? "border-white/10 bg-ink/78 shadow-[0_12px_50px_rgba(0,0,0,0.22)] backdrop-blur-2xl" : "border-white/6 bg-ink/56 backdrop-blur-md",
+        "sticky top-0 z-50 border-b transition-all duration-500",
+        scrolled
+          ? "border-white/12 bg-[#03050b]/86 shadow-[0_18px_70px_rgba(0,0,0,0.32),0_0_40px_rgba(239,61,61,0.08)] backdrop-blur-2xl"
+          : "border-white/6 bg-[#03050b]/58 backdrop-blur-md",
       )}
     >
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8" aria-label="Primary">
@@ -38,7 +40,7 @@ export function Navbar() {
           </div>
         </Link>
 
-        <div className="hidden items-center gap-1 rounded-lg border border-white/8 bg-white/[0.025] p-1 lg:flex">
+        <div className="hidden items-center gap-1 rounded-lg border border-white/8 bg-white/[0.025] p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] lg:flex">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -51,16 +53,16 @@ export function Navbar() {
               {pathname === item.href ? (
                 <motion.span
                   layoutId="nav-active-pill"
-                  className="absolute inset-0 rounded-md bg-white/10"
-                  transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
+                  className="absolute inset-0 rounded-md bg-[radial-gradient(circle_at_50%_0%,rgba(239,61,61,0.16),rgba(255,255,255,0.08))]"
+                  transition={{ duration: 0.46, ease: [0.16, 1, 0.3, 1] }}
                 />
               ) : null}
               <span className="relative z-10">{item.label}</span>
               {pathname === item.href ? (
                 <motion.span
                   layoutId="nav-active-underline"
-                  className="absolute inset-x-3 -bottom-1 h-px rounded-full bg-white/32"
-                  transition={{ duration: 0.32, ease: "easeInOut" }}
+                  className="absolute inset-x-3 -bottom-1 h-px rounded-full bg-red-200/60 shadow-[0_0_16px_rgba(239,61,61,0.5)]"
+                  transition={{ duration: 0.46, ease: "easeInOut" }}
                 />
               ) : null}
             </Link>
@@ -82,8 +84,15 @@ export function Navbar() {
         </button>
       </nav>
 
+      <AnimatePresence>
       {open ? (
-        <div className="border-t border-white/8 bg-ink px-5 py-5 lg:hidden">
+        <motion.div
+          initial={{ opacity: 0, y: -8, filter: "blur(8px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          exit={{ opacity: 0, y: -8, filter: "blur(8px)" }}
+          transition={{ duration: 0.34, ease: [0.16, 1, 0.3, 1] }}
+          className="border-t border-white/8 bg-[#03050b]/92 px-5 py-5 backdrop-blur-xl lg:hidden"
+        >
           <div className="grid gap-2">
             {navItems.map((item) => (
               <Link
@@ -96,8 +105,9 @@ export function Navbar() {
               </Link>
             ))}
           </div>
-        </div>
+        </motion.div>
       ) : null}
+      </AnimatePresence>
     </header>
   );
 }
