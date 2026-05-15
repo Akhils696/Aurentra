@@ -1,9 +1,11 @@
 import { Activity, ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { DeviceMotion } from "@/components/ui/device-motion";
 
 export function HeroDeviceVisual() {
   return (
     <div className="poster-device-wrap relative perspective-[1200px]">
       <div className="poster-device-glow" />
+      <DeviceMotion>
       <div className="device-frame relative mx-auto max-w-xl rotate-[-2deg] rounded-[18px] border border-white/12 bg-[#050914] p-3 shadow-[0_38px_120px_rgba(0,0,0,0.58)] lg:translate-z-6">
         <div className="rounded-[12px] border border-white/8 bg-[linear-gradient(145deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02)),#070b15] p-5">
           <div className="flex items-center justify-between">
@@ -39,6 +41,7 @@ export function HeroDeviceVisual() {
           </div>
         </div>
       </div>
+      </DeviceMotion>
       <div className="absolute -bottom-8 right-2 w-44 rounded-[18px] border border-white/12 bg-[#060a13] p-3 shadow-[0_24px_70px_rgba(0,0,0,0.5)]">
         <div className="rounded-xl bg-white/[0.04] p-4">
           <Activity aria-hidden className="size-5 text-red-100" />

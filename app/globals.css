@@ -634,6 +634,15 @@ p {
   position: relative;
 }
 
+.device-motion-wrap {
+  transform-style: preserve-3d;
+  transition: filter 420ms ease;
+}
+
+.device-motion-wrap:hover {
+  filter: drop-shadow(0 0 38px rgba(239, 61, 61, 0.12));
+}
+
 .premium-device::after {
   content: "";
   position: absolute;
