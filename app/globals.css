@@ -754,6 +754,25 @@ p {
   transform-origin: bottom;
 }
 
+.scroll-depth-layer {
+  position: absolute;
+  inset: 0;
+}
+
+.scroll-depth-far {
+  background:
+    radial-gradient(circle at 18% 28%, rgba(239, 61, 61, 0.08), transparent 24rem),
+    radial-gradient(circle at 76% 52%, rgba(75, 105, 170, 0.1), transparent 28rem);
+}
+
+.scroll-depth-near {
+  opacity: 0.18;
+  background-image:
+    linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.08) 48%, transparent 58%),
+    linear-gradient(90deg, transparent, rgba(239, 61, 61, 0.08), transparent);
+  transform: skewY(-4deg);
+}
+
 @keyframes shimmer-gradient {
   0%,
   28% {
