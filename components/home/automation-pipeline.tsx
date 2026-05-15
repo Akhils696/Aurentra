@@ -22,7 +22,7 @@ export function AutomationPipeline() {
             <p className="text-lg font-semibold text-white">Automation Pipeline</p>
           </div>
           <motion.span
-            className="rounded-md bg-emerald-400/12 px-3 py-1 text-xs font-semibold text-emerald-200"
+            className="rounded-md bg-white/8 px-3 py-1 text-xs font-semibold text-white/72"
             initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.92 }}
             animate={prefersReducedMotion ? undefined : { opacity: 1, scale: 1 }}
             transition={{ duration: 0.46, delay: 0.42, ease: "easeInOut" }}
@@ -57,7 +57,7 @@ export function AutomationPipeline() {
                 animate={prefersReducedMotion ? undefined : { opacity: 1, scale: 1 }}
                 transition={{ duration: 0.38, delay: 0.88 + index * 0.15, ease: [0.22, 1, 0.36, 1] }}
               >
-                <CheckCircle2 aria-hidden className="size-5 text-emerald-300" />
+                <CheckCircle2 aria-hidden className="size-5 text-red-100/80" />
               </motion.span>
             </motion.div>
           ))}

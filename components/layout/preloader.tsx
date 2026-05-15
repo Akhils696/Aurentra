@@ -26,7 +26,7 @@ export function Preloader() {
               initial={prefersReducedMotion ? false : { opacity: 0, scale: 0.94, y: 8 }}
               animate={prefersReducedMotion ? undefined : { opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.52, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
-              className="rounded-lg border border-white/10 bg-white/[0.04] p-3 shadow-glow"
+              className="rounded-lg border border-white/10 bg-white/[0.04] p-3 shadow-[0_0_42px_rgba(239,61,61,0.18)]"
             >
               <Image src="/images/aurentra-logo.jpeg" alt="Aurentra Technologies" width={72} height={72} className="size-16 rounded-md object-cover" priority />
             </motion.div>

@@ -95,18 +95,18 @@ export default function Home() {
       <section className="ambient-section cinematic-red-glow section-depth py-20 sm:py-28">
         <Container>
           <div className="poster-panel metal-edge">
-          <p className="quiet-label mb-8 max-w-xl font-semibold">How we turn that into momentum</p>
-          <div className="mb-12 grid gap-8 md:grid-cols-[0.72fr_0.28fr] md:items-end">
-            <SectionHeading
-              eyebrow="Services"
-              title="Focused work, not a menu of buzzwords"
-              copy="Most teams do not need more software. They need the right few systems connected well enough to save time, create clarity, and support growth."
-            />
-            <div className="flex flex-col gap-3 sm:flex-row md:justify-end">
-              <Button href="/services" variant="secondary">Explore capabilities</Button>
+            <p className="quiet-label mb-8 max-w-xl font-semibold">How we turn that into momentum</p>
+            <div className="mb-12 grid gap-8 md:grid-cols-[0.72fr_0.28fr] md:items-end">
+              <SectionHeading
+                eyebrow="Services"
+                title="Focused work, not a menu of buzzwords"
+                copy="Most teams do not need more software. They need the right few systems connected well enough to save time, create clarity, and support growth."
+              />
+              <div className="flex flex-col gap-3 sm:flex-row md:justify-end">
+                <Button href="/services" variant="secondary">Explore capabilities</Button>
+              </div>
             </div>
-          </div>
-          <PremiumServices />
+            <PremiumServices />
           </div>
         </Container>
       </section>
@@ -117,11 +117,11 @@ export default function Home() {
         <Container>
           <p className="quiet-label mb-8 ml-auto max-w-xl font-semibold">The result is not just a launch, but a calmer operating rhythm</p>
           <div className="ml-auto max-w-4xl">
-          <SectionHeading
-            eyebrow="Portfolio"
-            title="What the work tends to look like"
-            copy="The best projects are not the loudest ones. They are the systems that quietly make a team faster every week."
-          />
+            <SectionHeading
+              eyebrow="Portfolio"
+              title="What the work tends to look like"
+              copy="The best projects are not the loudest ones. They are the systems that quietly make a team faster every week."
+            />
           </div>
           <div className="mt-12 grid gap-5 md:grid-cols-3">
             {projects.map((project, index) => (
@@ -147,7 +147,7 @@ export default function Home() {
           <div className="mt-12 grid gap-5 lg:grid-cols-[0.92fr_1.08fr_0.88fr]">
             {testimonials.map((testimonial, index) => (
               <figure key={testimonial.name} className={`ui-card ${index === 1 ? "p-8" : "p-6"} ${index === 0 ? "lg:mt-8" : ""} ${index === 2 ? "lg:mt-14" : ""}`}>
-                <blockquote className="leading-8 text-white/72">“{testimonial.quote}”</blockquote>
+                <blockquote className="leading-8 text-white/72">&ldquo;{testimonial.quote}&rdquo;</blockquote>
                 <figcaption className="mt-6">
                   <p className="font-semibold text-white">{testimonial.name}</p>
                   <p className="text-sm text-white/45">{testimonial.role}</p>
@@ -178,4 +178,5 @@ export default function Home() {
     </>
   );
 }
+
 

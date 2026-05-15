@@ -50,7 +50,7 @@ export default function ServicesPage() {
                     <div className="grid gap-4 sm:grid-cols-2">
                       {service.benefits.map((benefit) => (
                         <div key={benefit} className="flex gap-3 rounded-md border border-white/8 bg-black/18 p-4">
-                          <Check aria-hidden className="mt-1 size-5 flex-none text-emerald-300" />
+                          <Check aria-hidden className="mt-1 size-5 flex-none text-red-100/80" />
                           <p className="leading-7 text-white/72">{benefit}</p>
                         </div>
                       ))}
