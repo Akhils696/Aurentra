@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { revealTransition } from "@/lib/motion";
 
 export function MotionReveal({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   return (
@@ -8,7 +9,7 @@ export function MotionReveal({ children, delay = 0 }: { children: React.ReactNod
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.68, delay, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ ...revealTransition, delay }}
     >
       {children}
     </motion.div>
