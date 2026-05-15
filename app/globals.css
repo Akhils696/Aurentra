@@ -450,6 +450,22 @@ p {
   will-change: transform, opacity;
 }
 
+.scene-bridge {
+  position: relative;
+  height: 5rem;
+  overflow: hidden;
+}
+
+.scene-bridge-light {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 50%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), rgba(239, 61, 61, 0.18), transparent);
+  box-shadow: 0 0 40px rgba(239, 61, 61, 0.12);
+}
+
 .poster-device-wrap {
   filter: drop-shadow(0 28px 80px rgba(0, 0, 0, 0.5));
 }

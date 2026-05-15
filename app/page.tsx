@@ -14,6 +14,7 @@ import { ParallaxCard } from "@/components/ui/parallax-card";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { LaptopMockup, MobileMockup } from "@/components/ui/device-mockups";
 import { SceneSection } from "@/components/ui/scene-section";
+import { SceneBridge } from "@/components/ui/scene-bridge";
 import { projects, testimonials } from "@/lib/site-data";
 
 export default function Home() {
@@ -52,6 +53,7 @@ export default function Home() {
       </HeroParallax>
 
       <SectionDivider />
+      <SceneBridge />
 
       <SceneSection className="ambient-section py-12 sm:py-16">
         <Container>
@@ -62,6 +64,7 @@ export default function Home() {
       </SceneSection>
 
       <SectionDivider />
+      <SceneBridge />
 
       <SceneSection className="py-14 sm:py-16">
         <Container>
@@ -72,6 +75,7 @@ export default function Home() {
       </SceneSection>
 
       <SectionDivider />
+      <SceneBridge />
 
       <SceneSection className="ambient-section cinematic-red-glow py-16 sm:py-24" data-light="right">
         <Container>
