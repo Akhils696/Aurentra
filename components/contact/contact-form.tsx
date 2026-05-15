@@ -1,6 +1,6 @@
 "use client";
 
-import { Send } from "lucide-react";
+import { Loader2, Send } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -43,7 +43,7 @@ export function ContactForm() {
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setFormState({ status: "loading", message: "Sending your message..." });
+    setFormState({ status: "loading", message: "Securing your request..." });
 
     const form = event.currentTarget;
     const response = await fetch("/api/contact", {
@@ -62,7 +62,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="glass grid gap-5 rounded-lg p-6 sm:p-8" aria-label="Contact form">
+    <form onSubmit={handleSubmit} className="glass grid gap-5 rounded-lg p-6 sm:p-8" aria-label="Contact form" aria-busy={formState.status === "loading"}>
       <div className="grid gap-5 sm:grid-cols-2">
         <FloatingField label="Name" name="name" />
         <FloatingField label="Email" name="email" type="email" />
@@ -70,14 +70,14 @@ export function ContactForm() {
       <FloatingField label="Message" name="message" multiline />
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
         <Button type="submit" className="sm:w-fit">
-          {formState.status === "loading" ? "Sending..." : "Send Message"}
-          <Send aria-hidden className="ml-2 size-4" />
+          {formState.status === "loading" ? "Sending securely" : "Send Message"}
+          {formState.status === "loading" ? <Loader2 aria-hidden className="ml-2 size-4 animate-spin" /> : <Send aria-hidden className="ml-2 size-4" />}
         </Button>
         <AnimatePresence mode="wait">
           {formState.message ? (
             <motion.p
               key={formState.status}
-              className={formState.status === "error" ? "text-sm text-red-200" : "flex items-center gap-2 text-sm text-emerald-200"}
+              className={formState.status === "error" ? "text-sm text-red-200" : "flex items-center gap-2 text-sm text-white/78"}
               role="status"
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
@@ -86,7 +86,7 @@ export function ContactForm() {
             >
               {formState.status === "success" ? (
                 <motion.span
-                  className="flex size-5 items-center justify-center rounded-full bg-emerald-300 text-ink"
+                  className="flex size-5 items-center justify-center rounded-full bg-white text-ink shadow-[0_0_28px_rgba(239,61,61,0.26)]"
                   initial={{ scale: 0.5, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
