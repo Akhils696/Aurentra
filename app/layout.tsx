@@ -9,6 +9,7 @@ import { Preloader } from "@/components/layout/preloader";
 import { SignatureLayer } from "@/components/layout/signature-layer";
 import { ScrollDepthProvider } from "@/components/layout/scroll-depth-provider";
 import { SmoothScroll } from "@/components/layout/smooth-scroll";
+import { MotionQualityProvider } from "@/components/layout/motion-quality-provider";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body className={`${inter.variable} font-sans antialiased`}>
         <BackgroundMotion />
+        <MotionQualityProvider />
         <SignatureLayer />
         <ScrollDepthProvider />
         <Preloader />

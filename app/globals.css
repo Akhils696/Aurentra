@@ -917,6 +917,22 @@ p {
   cursor: progress;
 }
 
+[data-motion="balanced"] .motion-ambient,
+[data-motion="reduced"] .motion-ambient,
+[data-motion="balanced"] .cinematic-particles,
+[data-motion="reduced"] .cinematic-particles,
+[data-motion="balanced"] .signature-triangle,
+[data-motion="reduced"] .signature-triangle {
+  animation: none !important;
+  opacity: 0.08 !important;
+}
+
+[data-motion="reduced"] .scene-bridge,
+[data-motion="reduced"] .scroll-depth-layer,
+[data-motion="balanced"] .scroll-depth-near {
+  display: none;
+}
+
 @keyframes cinematic-reflection {
   0%,
   48% {
