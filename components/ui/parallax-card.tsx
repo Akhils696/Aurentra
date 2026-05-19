@@ -1,17 +1,22 @@
 "use client";
 
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion, useReducedMotion } from "framer-motion";
+import { memo } from "react";
 
-export function ParallaxCard({ children, offset = 16 }: { children: React.ReactNode; offset?: number }) {
-  const ref = useRef<HTMLDivElement | null>(null);
+function ParallaxCardComponent({ children, offset = 16 }: { children: React.ReactNode; offset?: number }) {
   const prefersReducedMotion = useReducedMotion();
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
-  const y = useTransform(scrollYProgress, [0, 1], [offset * 0.65, -offset * 0.65]);
 
   return (
-    <motion.div ref={ref} className="motion-reduce:transform-none" style={prefersReducedMotion ? undefined : { y }}>
+    <motion.div
+      className="motion-reduce:transform-none"
+      initial={prefersReducedMotion ? false : { y: offset * 0.45 }}
+      whileInView={prefersReducedMotion ? undefined : { y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+    >
       {children}
     </motion.div>
   );
 }
+
+export const ParallaxCard = memo(ParallaxCardComponent);

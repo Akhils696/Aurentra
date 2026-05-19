@@ -1,9 +1,10 @@
 "use client";
 
 import { motion, useMotionValue, useReducedMotion, useSpring, useTransform } from "framer-motion";
+import { memo } from "react";
 import { hoverSpring } from "@/lib/motion";
 
-export function DeviceMotion({ children }: { children: React.ReactNode }) {
+function DeviceMotionComponent({ children }: { children: React.ReactNode }) {
   const prefersReducedMotion = useReducedMotion();
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -30,3 +31,5 @@ export function DeviceMotion({ children }: { children: React.ReactNode }) {
     </motion.div>
   );
 }
+
+export const DeviceMotion = memo(DeviceMotionComponent);

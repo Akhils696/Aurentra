@@ -1,9 +1,10 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import { memo } from "react";
 import { motionTokens } from "@/lib/motion";
 
-export function MotionScaleIn({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
+function MotionScaleInComponent({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   const prefersReducedMotion = useReducedMotion();
 
   return (
@@ -16,3 +17,5 @@ export function MotionScaleIn({ children, delay = 0 }: { children: React.ReactNo
     </motion.div>
   );
 }
+
+export const MotionScaleIn = memo(MotionScaleInComponent);

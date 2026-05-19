@@ -1,9 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { memo } from "react";
 import { revealTransition } from "@/lib/motion";
 
-export function MotionReveal({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
+function MotionRevealComponent({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -15,3 +16,5 @@ export function MotionReveal({ children, delay = 0 }: { children: React.ReactNod
     </motion.div>
   );
 }
+
+export const MotionReveal = memo(MotionRevealComponent);
