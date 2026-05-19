@@ -6,7 +6,7 @@ export function HeroDeviceVisual() {
     <div className="poster-device-wrap relative perspective-[1200px]">
       <div className="poster-device-glow" />
       <DeviceMotion>
-      <div className="device-frame relative mx-auto max-w-xl rotate-[-2deg] rounded-[18px] border border-white/12 bg-[#050914] p-3 shadow-[0_38px_120px_rgba(0,0,0,0.58)] lg:translate-z-6">
+      <div className="device-frame relative mx-auto max-w-xl rotate-[-2deg] rounded-[18px] border border-white/12 bg-[#050914] p-3 shadow-[0_26px_78px_rgba(0,0,0,0.5)] lg:translate-z-6">
         <div className="rounded-[12px] border border-white/8 bg-[linear-gradient(145deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02)),#070b15] p-5">
           <div className="flex items-center justify-between">
             <div>
@@ -42,7 +42,7 @@ export function HeroDeviceVisual() {
         </div>
       </div>
       </DeviceMotion>
-      <div className="absolute -bottom-8 right-2 w-44 rounded-[18px] border border-white/12 bg-[#060a13] p-3 shadow-[0_24px_70px_rgba(0,0,0,0.5)]">
+      <div className="absolute -bottom-8 right-2 w-44 rounded-[18px] border border-white/12 bg-[#060a13] p-3 shadow-[0_18px_46px_rgba(0,0,0,0.42)]">
         <div className="rounded-xl bg-white/[0.04] p-4">
           <Activity aria-hidden className="size-5 text-red-100" />
           <p className="mt-5 text-3xl font-black text-white">11m</p>
