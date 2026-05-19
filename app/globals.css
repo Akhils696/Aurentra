@@ -940,6 +940,27 @@ p {
   display: none;
 }
 
+[data-motion="balanced"] .ui-card-hover::before,
+[data-motion="reduced"] .ui-card-hover::before,
+[data-motion="balanced"] .premium-device::before,
+[data-motion="reduced"] .premium-device::before,
+[data-performance="constrained"] .premium-feature-panel::after,
+[data-performance="constrained"] .poster-cta::after {
+  animation: none !important;
+  opacity: 0 !important;
+}
+
+[data-motion="balanced"] .poster-device-glow,
+[data-motion="reduced"] .poster-device-glow,
+[data-performance="constrained"] .dynamic-red-light {
+  opacity: 0.12 !important;
+}
+
+[data-motion="balanced"] .device-motion-wrap,
+[data-motion="reduced"] .device-motion-wrap {
+  transform: none !important;
+}
+
 @keyframes cinematic-reflection {
   0%,
   48% {
