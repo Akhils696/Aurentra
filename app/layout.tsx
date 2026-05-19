@@ -12,7 +12,13 @@ import { SmoothScroll } from "@/components/layout/smooth-scroll";
 import { MotionQualityProvider } from "@/components/layout/motion-quality-provider";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+  preload: true,
+  fallback: ["Arial", "sans-serif"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://aurentra.com"),
@@ -35,6 +41,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preload" as="image" href="/images/aurentra-logo.jpeg" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         <BackgroundMotion />
         <MotionQualityProvider />
