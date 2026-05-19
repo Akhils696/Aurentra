@@ -16,8 +16,8 @@ export function SceneSection({ children, className }: { children: React.ReactNod
     <motion.section
       ref={ref}
       className={cn("scene-section", className)}
-      initial={prefersReducedMotion ? false : { filter: "blur(10px)", scale: 0.985 }}
-      whileInView={prefersReducedMotion ? undefined : { filter: "blur(0px)", scale: 1 }}
+      initial={prefersReducedMotion ? false : { opacity: 0.78, scale: 0.992, y: 18 }}
+      whileInView={prefersReducedMotion ? undefined : { opacity: 1, scale: 1, y: 0 }}
       viewport={{ once: true, amount: 0.16 }}
       transition={{ duration: motionTokens.duration.scene, ease: motionTokens.cinematic }}
       style={prefersReducedMotion ? undefined : { y, opacity }}

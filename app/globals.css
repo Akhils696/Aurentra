@@ -52,7 +52,7 @@ body::after {
   background:
     radial-gradient(circle at center, transparent 48%, rgba(0, 0, 0, 0.34) 100%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent 16%, transparent 82%, rgba(0, 0, 0, 0.26));
-  mix-blend-mode: multiply;
+  opacity: 0.82;
 }
 
 main::before {
@@ -66,7 +66,6 @@ main::before {
     repeating-radial-gradient(circle at 17% 23%, rgba(255, 255, 255, 0.12) 0 1px, transparent 1px 5px),
     linear-gradient(115deg, transparent 0%, rgba(239, 61, 61, 0.08) 28%, transparent 54%);
   background-size: 260px 260px, 100% 100%;
-  mix-blend-mode: screen;
 }
 
 h1,
@@ -108,7 +107,6 @@ p {
   background:
     linear-gradient(to top, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.16) 68%, transparent),
     linear-gradient(90deg, transparent 0 4%, #050712 4% 7%, transparent 7% 10%, #070a12 10% 14%, transparent 14% 18%, #03050b 18% 23%, transparent 23% 30%, #060915 30% 36%, transparent 36% 41%, #050812 41% 45%, transparent 45% 51%, #080b15 51% 58%, transparent 58% 64%, #04060d 64% 70%, transparent 70% 76%, #070a12 76% 82%, transparent 82% 100%);
-  filter: blur(0.2px);
 }
 
 .cinematic-fog {
@@ -117,7 +115,7 @@ p {
   right: -12%;
   height: 32vh;
   background: linear-gradient(90deg, transparent, rgba(120, 140, 180, 0.14), rgba(239, 61, 61, 0.1), transparent);
-  filter: blur(32px);
+  opacity: 0.22;
 }
 
 .fog-one {
@@ -156,7 +154,6 @@ p {
   position: absolute;
   inset: 0;
   background: linear-gradient(105deg, transparent 12%, rgba(255, 255, 255, 0.1) 44%, rgba(239, 61, 61, 0.08) 50%, transparent 62%);
-  filter: blur(18px);
   transform: skewX(-12deg);
 }
 
@@ -227,8 +224,7 @@ p {
   background:
     radial-gradient(circle, rgba(239, 61, 61, 0.34), transparent 58%),
     radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.08), transparent 48%);
-  filter: blur(46px);
-  mix-blend-mode: screen;
+  opacity: 0.32;
 }
 
 .light-a {
@@ -264,7 +260,7 @@ p {
 
 .triangle-shell {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.02) 46%, rgba(239, 61, 61, 0.18));
-  filter: drop-shadow(0 34px 80px rgba(0, 0, 0, 0.52));
+  box-shadow: 0 34px 80px rgba(0, 0, 0, 0.32);
 }
 
 .triangle-core {
@@ -277,8 +273,7 @@ p {
   inset: 10%;
   transform: translateY(16%) scale(1.08);
   background: rgba(0, 0, 0, 0.42);
-  filter: blur(18px);
-  opacity: 0.58;
+  opacity: 0.42;
 }
 
 ::selection {
@@ -399,8 +394,7 @@ p {
   z-index: -1;
   height: 46%;
   background: linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.055), transparent);
-  filter: blur(42px);
-  opacity: 0.38;
+  opacity: 0.22;
 }
 
 .ambient-section {
@@ -417,8 +411,7 @@ p {
   height: min(30rem, 70vw);
   border-radius: 999px;
   background: radial-gradient(circle, rgba(255, 255, 255, 0.065), transparent 64%);
-  filter: blur(26px);
-  opacity: 0.65;
+  opacity: 0.24;
 }
 
 .ambient-section[data-light="right"]::before {
@@ -441,8 +434,7 @@ p {
   height: min(34rem, 72vw);
   border-radius: 999px;
   background: radial-gradient(circle, rgba(239, 61, 61, 0.2), transparent 66%);
-  filter: blur(40px);
-  opacity: 0.75;
+  opacity: 0.34;
 }
 
 .scene-section {
@@ -467,7 +459,7 @@ p {
 }
 
 .poster-device-wrap {
-  filter: drop-shadow(0 28px 80px rgba(0, 0, 0, 0.5));
+  filter: none;
 }
 
 .cinematic-hero-scene {
@@ -487,12 +479,10 @@ p {
 @keyframes hero-title-settle {
   from {
     opacity: 0;
-    filter: blur(12px);
     transform: translateY(28px) scale(0.985);
   }
   to {
     opacity: 1;
-    filter: blur(0);
     transform: translateY(0) scale(1);
   }
 }
@@ -500,12 +490,10 @@ p {
 @keyframes hero-device-settle {
   from {
     opacity: 0;
-    filter: blur(16px);
     transform: translate3d(34px, 24px, 0) rotate(-4deg) scale(0.96);
   }
   to {
     opacity: 1;
-    filter: blur(0);
     transform: translate3d(0, 0, 0) rotate(0) scale(1);
   }
 }
@@ -543,7 +531,7 @@ p {
   background:
     radial-gradient(circle, rgba(239, 61, 61, 0.28), transparent 58%),
     radial-gradient(circle at 70% 20%, rgba(75, 105, 170, 0.18), transparent 62%);
-  filter: blur(34px);
+  opacity: 0.64;
 }
 
 .device-frame {
@@ -674,7 +662,7 @@ p {
 
 .device-laptop,
 .device-mobile {
-  filter: drop-shadow(0 30px 80px rgba(0, 0, 0, 0.54));
+  filter: none;
 }
 
 .premium-device {
@@ -687,7 +675,7 @@ p {
 }
 
 .device-motion-wrap:hover {
-  filter: drop-shadow(0 0 38px rgba(239, 61, 61, 0.12));
+  filter: none;
 }
 
 .premium-device::after {
@@ -748,7 +736,7 @@ p {
 }
 
 .signature-layer {
-  mix-blend-mode: screen;
+  opacity: 0.82;
 }
 
 .signature-triangle {
@@ -758,7 +746,7 @@ p {
   clip-path: polygon(50% 0, 100% 92%, 0 92%);
   border: 1px solid rgba(239, 61, 61, 0.2);
   background: linear-gradient(180deg, rgba(239, 61, 61, 0.1), transparent 68%);
-  filter: blur(0.2px) drop-shadow(0 0 34px rgba(239, 61, 61, 0.16));
+  box-shadow: 0 0 34px rgba(239, 61, 61, 0.12);
   opacity: 0.28;
 }
 

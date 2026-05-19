@@ -87,9 +87,9 @@ export function Navbar() {
       <AnimatePresence>
       {open ? (
         <motion.div
-          initial={{ opacity: 0, y: -8, filter: "blur(8px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          exit={{ opacity: 0, y: -8, filter: "blur(8px)" }}
+          initial={{ opacity: 0, y: -8, scale: 0.985 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, y: -8, scale: 0.985 }}
           transition={{ duration: 0.34, ease: [0.16, 1, 0.3, 1] }}
           className="border-t border-white/8 bg-[#03050b]/92 px-5 py-5 backdrop-blur-xl lg:hidden"
         >
