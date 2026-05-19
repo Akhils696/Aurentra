@@ -634,6 +634,24 @@ p {
     0 0 42px rgba(239, 61, 61, 0.12);
 }
 
+.performance-skeleton {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015)),
+    rgba(8, 12, 22, 0.46);
+}
+
+.performance-skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, transparent 20%, rgba(255, 255, 255, 0.055), transparent 52%);
+  transform: translateX(-120%);
+  animation: skeleton-sweep 2.2s ease-in-out infinite;
+}
+
 @keyframes cta-breathe {
   0%,
   100% {
@@ -641,6 +659,16 @@ p {
   }
   50% {
     box-shadow: 0 38px 150px rgba(0, 0, 0, 0.54), 0 0 80px rgba(239, 61, 61, 0.12);
+  }
+}
+
+@keyframes skeleton-sweep {
+  0%,
+  48% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(120%);
   }
 }
 
