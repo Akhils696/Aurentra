@@ -31,37 +31,18 @@ export function BackgroundMotion() {
       <BrandGeometry variant="hero" />
       <motion.div
         className="dynamic-red-light light-a motion-ambient"
-        animate={prefersReducedMotion ? undefined : { x: ["-8%", "8%", "-8%"], y: ["0%", "6%", "0%"], opacity: [0.26, 0.44, 0.26] }}
-        transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="dynamic-red-light light-b motion-ambient"
-        animate={prefersReducedMotion ? undefined : { x: ["6%", "-6%", "6%"], y: ["4%", "-3%", "4%"], opacity: [0.18, 0.34, 0.18] }}
-        transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="cinematic-fog fog-one motion-ambient"
-        animate={prefersReducedMotion ? undefined : { x: ["-6%", "4%", "-6%"], opacity: [0.18, 0.3, 0.18] }}
+        animate={prefersReducedMotion ? undefined : { x: ["-4%", "4%", "-4%"], opacity: [0.24, 0.36, 0.24] }}
         transition={{ duration: 24, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="cinematic-fog fog-two motion-ambient"
-        animate={prefersReducedMotion ? undefined : { x: ["5%", "-4%", "5%"], opacity: [0.12, 0.24, 0.12] }}
-        transition={{ duration: 31, repeat: Infinity, ease: "easeInOut" }}
+        className="cinematic-fog fog-one motion-ambient"
+        animate={prefersReducedMotion ? undefined : { x: ["-4%", "3%", "-4%"], opacity: [0.14, 0.22, 0.14] }}
+        transition={{ duration: 30, repeat: Infinity, ease: "easeInOut" }}
       />
-      <motion.div
-        className="atmospheric-sweep motion-ambient"
-        animate={prefersReducedMotion ? undefined : { x: ["-35%", "35%", "-35%"], opacity: [0.05, 0.16, 0.05] }}
-        transition={{ duration: 34, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="ambient-mesh motion-ambient absolute inset-0 opacity-60"
-        animate={prefersReducedMotion ? undefined : { backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-        transition={{ duration: 28, repeat: Infinity, ease: "easeInOut" }}
-      />
+      <div className="ambient-mesh motion-ambient absolute inset-0 opacity-45" />
       <div className="cinematic-particles" />
       <div className="reflective-floor" />
-      <div className="ambient-noise absolute inset-0 opacity-[0.05]" />
+      <div className="ambient-noise absolute inset-0 opacity-[0.035]" />
       <motion.div
         className="absolute inset-0 opacity-[0.035] [background-image:linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:84px_84px]"
         style={prefersReducedMotion ? undefined : { backgroundPositionX: springX, backgroundPositionY: springY }}
