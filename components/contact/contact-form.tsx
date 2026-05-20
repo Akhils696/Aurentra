@@ -105,7 +105,7 @@ export function ContactForm() {
       <FloatingField label="Message" name="message" multiline />
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
         <Button type="submit" className="sm:w-fit">
-          {formState.status === "loading" ? "Sending securely" : "Send Message"}
+          {formState.status === "loading" ? "Sending securely" : "Request Consultation"}
           {formState.status === "loading" ? <Loader2 aria-hidden className="ml-2 size-4 animate-spin" /> : <Send aria-hidden className="ml-2 size-4" />}
         </Button>
         <AnimatePresence mode="wait">
