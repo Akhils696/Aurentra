@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { AtSign, Mail, MapPin, Phone } from "lucide-react";
+import { AtSign, ExternalLink, Mail, MapPin, Phone } from "lucide-react";
 import { ContactForm } from "@/components/contact/contact-form";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { AnimatedIcon } from "@/components/ui/animated-icon";
@@ -59,9 +59,20 @@ export default function ContactPage() {
                   </div>
                 </div>
               ))}
-              <div className="min-h-56 rounded-lg border border-white/8 bg-[linear-gradient(135deg,rgba(239,68,68,0.14),rgba(255,255,255,0.04)),repeating-linear-gradient(45deg,rgba(255,255,255,0.04)_0,rgba(255,255,255,0.04)_1px,transparent_1px,transparent_16px)] p-6">
-                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-aurora">Location</p>
-                <p className="mt-4 max-w-sm leading-7 text-white/62">Amrita University, Amritanagar, Ettimadai, Tamil Nadu 641112, India</p>
+              <div className="rounded-lg border border-white/8 bg-white/[0.035] p-6">
+                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-aurora">Service Area</p>
+                <h2 className="mt-4 text-2xl font-semibold text-white">Based in Coimbatore, working wherever the right project is.</h2>
+                <p className="mt-4 leading-7 text-white/62">
+                  Serving startups and businesses across India, with remote collaboration available for clients globally.
+                </p>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Amrita%20University%20Amritanagar%20Ettimadai%20Tamil%20Nadu%20641112%20India"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-white/78 transition hover:text-aurora"
+                >
+                  View location <ExternalLink aria-hidden className="size-4" />
+                </a>
               </div>
             </aside>
           </div>
