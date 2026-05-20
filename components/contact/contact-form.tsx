@@ -108,6 +108,7 @@ export function ContactForm() {
           {formState.status === "loading" ? "Sending securely" : "Request Consultation"}
           {formState.status === "loading" ? <Loader2 aria-hidden className="ml-2 size-4 animate-spin" /> : <Send aria-hidden className="ml-2 size-4" />}
         </Button>
+        <p className="text-sm leading-6 text-white/52">We usually respond within 1 business day.</p>
         <AnimatePresence mode="wait">
           {formState.message ? (
             <motion.p
