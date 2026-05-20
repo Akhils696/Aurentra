@@ -6,15 +6,17 @@ export async function POST(request: Request) {
   const formData = await request.formData();
   const name = String(formData.get("name") ?? "").trim();
   const email = String(formData.get("email") ?? "").trim();
+  const projectType = String(formData.get("projectType") ?? "").trim();
   const message = String(formData.get("message") ?? "").trim();
 
-  if (!name || !emailRegex.test(email) || message.length < 10) {
-    return NextResponse.json({ ok: false, message: "Please provide a valid name, email, and message." }, { status: 400 });
+  if (!name || !emailRegex.test(email) || !projectType || message.length < 10) {
+    return NextResponse.json({ ok: false, message: "Please provide a valid name, email, project type, and message." }, { status: 400 });
   }
 
   const payload = {
     name,
     email,
+    projectType,
     message,
     to: process.env.CONTACT_TO_EMAIL ?? "aurentratechnologies@gmail.com",
     receivedAt: new Date().toISOString(),

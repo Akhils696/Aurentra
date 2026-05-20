@@ -38,6 +38,29 @@ function FloatingField({
   );
 }
 
+function FloatingSelect({ label, name, options }: { label: string; name: string; options: string[] }) {
+  const classes =
+    "input-surface peer w-full appearance-none rounded-md border border-white/10 bg-black/22 px-4 pb-3 pt-6 text-white outline-none";
+  const labelClasses =
+    "pointer-events-none absolute left-4 top-3 text-sm text-white/45 transition-all duration-200 peer-focus:text-aurora";
+
+  return (
+    <label className="relative block">
+      <select name={name} required className={classes} defaultValue="">
+        <option value="" disabled>
+          Select a project type
+        </option>
+        {options.map((option) => (
+          <option key={option} value={option} className="bg-[#050914] text-white">
+            {option}
+          </option>
+        ))}
+      </select>
+      <span className={labelClasses}>{label}</span>
+    </label>
+  );
+}
+
 export function ContactForm() {
   const [formState, setFormState] = useState<FormState>({ status: "idle", message: "" });
 
@@ -67,6 +90,11 @@ export function ContactForm() {
         <FloatingField label="Name" name="name" />
         <FloatingField label="Email" name="email" type="email" />
       </div>
+      <FloatingSelect
+        label="Project Type"
+        name="projectType"
+        options={["AI Automation", "Website Development", "Mobile App Development", "Software for Business", "UI/UX Design", "Not sure yet"]}
+      />
       <FloatingField label="Message" name="message" multiline />
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
         <Button type="submit" className="sm:w-fit">
