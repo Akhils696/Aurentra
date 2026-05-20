@@ -42,7 +42,11 @@ export default function ContactPage() {
 
             <aside className="grid gap-5">
               <div className="rounded-lg border border-white/8 bg-white/[0.035] p-6">
-                <SectionHeading eyebrow="Company Details" title="Start the conversation" copy="Email integration is prepared through the contact API route. Add your provider credentials in environment variables when ready." />
+                <SectionHeading
+                  eyebrow="Company Details"
+                  title="Start the conversation"
+                  copy="Tell us what you want to improve. We typically respond within 1 business day with the clearest next step for your project."
+                />
               </div>
               {details.map((detail) => (
                 <div key={detail.label} className="flex gap-4 rounded-lg border border-white/8 bg-black/18 p-5">
