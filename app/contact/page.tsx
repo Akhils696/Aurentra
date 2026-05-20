@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const details = [
   { label: "Email", value: "aurentratechnologies@gmail.com", icon: Mail },
-  { label: "Phone", value: "Available on request", icon: Phone },
+  { label: "Discovery Call", value: "Book a consultation after the initial project review", icon: Phone },
   { label: "Location", value: "Amrita University, Amritanagar, Ettimadai, Tamil Nadu 641112, India", icon: MapPin },
   { label: "Instagram", value: "@aurentratechnologies", icon: AtSign },
 ];
