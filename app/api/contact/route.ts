@@ -31,5 +31,5 @@ export async function POST(request: Request) {
   // Wire this payload to Resend, SendGrid, Nodemailer, or your CRM webhook in production.
   console.info("Contact inquiry received", payload);
 
-  return NextResponse.json({ ok: true, message: "Thanks for contacting Aurentra Technologies. We will reply shortly." });
+  return NextResponse.json({ ok: true, message: "Thanks. We received your inquiry and will respond within 1 business day." });
 }

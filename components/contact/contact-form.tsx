@@ -83,7 +83,7 @@ export function ContactForm() {
     }
 
     form.reset();
-    setFormState({ status: "success", message: data.message ?? "Thanks. We will reply shortly." });
+    setFormState({ status: "success", message: data.message ?? "Thanks. We received your inquiry and will respond within 1 business day." });
   }
 
   return (
@@ -113,12 +113,16 @@ export function ContactForm() {
           {formState.message ? (
             <motion.p
               key={formState.status}
-              className={formState.status === "error" ? "text-sm text-red-200" : "flex items-center gap-2 text-sm text-white/78"}
+              className={
+                formState.status === "error"
+                  ? "text-sm text-red-200"
+                  : "flex items-center gap-2 rounded-md border border-white/10 bg-white/[0.045] px-3 py-2 text-sm text-white/82"
+              }
               role="status"
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 8, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -6 }}
-              transition={{ duration: 0.25, ease: "easeInOut" }}
+              transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
             >
               {formState.status === "success" ? (
                 <motion.span
