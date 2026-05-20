@@ -7,6 +7,9 @@ export async function POST(request: Request) {
   const name = String(formData.get("name") ?? "").trim();
   const email = String(formData.get("email") ?? "").trim();
   const projectType = String(formData.get("projectType") ?? "").trim();
+  const budget = String(formData.get("budget") ?? "").trim();
+  const timeline = String(formData.get("timeline") ?? "").trim();
+  const companySize = String(formData.get("companySize") ?? "").trim();
   const message = String(formData.get("message") ?? "").trim();
 
   if (!name || !emailRegex.test(email) || !projectType || message.length < 10) {
@@ -17,6 +20,9 @@ export async function POST(request: Request) {
     name,
     email,
     projectType,
+    budget,
+    timeline,
+    companySize,
     message,
     to: process.env.CONTACT_TO_EMAIL ?? "aurentratechnologies@gmail.com",
     receivedAt: new Date().toISOString(),

@@ -15,11 +15,13 @@ function FloatingField({
   name,
   type = "text",
   multiline = false,
+  required = true,
 }: {
   label: string;
   name: string;
   type?: string;
   multiline?: boolean;
+  required?: boolean;
 }) {
   const classes =
     "input-surface peer w-full rounded-md border border-white/10 bg-black/22 px-4 pb-3 pt-6 text-white outline-none placeholder:text-transparent";
@@ -29,16 +31,16 @@ function FloatingField({
   return (
     <label className="relative block">
       {multiline ? (
-        <textarea name={name} required className={`${classes} min-h-44 resize-y`} placeholder={label} />
+        <textarea name={name} required={required} className={`${classes} min-h-44 resize-y`} placeholder={label} />
       ) : (
-        <input name={name} type={type} required className={classes} placeholder={label} />
+        <input name={name} type={type} required={required} className={classes} placeholder={label} />
       )}
       <span className={labelClasses}>{label}</span>
     </label>
   );
 }
 
-function FloatingSelect({ label, name, options }: { label: string; name: string; options: string[] }) {
+function FloatingSelect({ label, name, options, required = true }: { label: string; name: string; options: string[]; required?: boolean }) {
   const classes =
     "input-surface peer w-full appearance-none rounded-md border border-white/10 bg-black/22 px-4 pb-3 pt-6 text-white outline-none";
   const labelClasses =
@@ -46,9 +48,9 @@ function FloatingSelect({ label, name, options }: { label: string; name: string;
 
   return (
     <label className="relative block">
-      <select name={name} required className={classes} defaultValue="">
+      <select name={name} required={required} className={classes} defaultValue="">
         <option value="" disabled>
-          Select a project type
+          Select an option
         </option>
         {options.map((option) => (
           <option key={option} value={option} className="bg-[#050914] text-white">
@@ -95,6 +97,11 @@ export function ContactForm() {
         name="projectType"
         options={["AI Automation", "Website Development", "Mobile App Development", "Software for Business", "UI/UX Design", "Not sure yet"]}
       />
+      <div className="grid gap-5 sm:grid-cols-3">
+        <FloatingSelect label="Estimated Budget" name="budget" options={["Under ₹50k", "₹50k - ₹1L", "₹1L - ₹3L", "₹3L+", "Not sure yet"]} required={false} />
+        <FloatingSelect label="Timeline" name="timeline" options={["This month", "1-3 months", "3-6 months", "Flexible"]} required={false} />
+        <FloatingSelect label="Company Size" name="companySize" options={["Solo founder", "2-10", "11-50", "51+", "Not applicable"]} required={false} />
+      </div>
       <FloatingField label="Message" name="message" multiline />
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
         <Button type="submit" className="sm:w-fit">
