@@ -20,8 +20,8 @@ const details = [
 
 export default function ContactPage() {
   return (
-    <>
-      <AnimatedSection className="py-20 sm:py-24">
+    <div className="contact-page">
+      <AnimatedSection className="py-16 sm:py-20">
         <Container>
           <div className="max-w-4xl">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-aurora">Contact</p>
@@ -35,7 +35,7 @@ export default function ContactPage() {
         </Container>
       </AnimatedSection>
 
-      <AnimatedSection className="pb-24 sm:pb-28">
+      <AnimatedSection className="pb-20 sm:pb-24">
         <Container>
           <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
             <ContactForm />
@@ -78,6 +78,6 @@ export default function ContactPage() {
           </div>
         </Container>
       </AnimatedSection>
-    </>
+    </div>
   );
 }

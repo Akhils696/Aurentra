@@ -165,7 +165,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="glass grid gap-5 rounded-lg p-6 sm:p-8" aria-label="Contact form" aria-busy={formState.status === "loading"}>
+    <form onSubmit={handleSubmit} className="contact-form-panel glass grid gap-5 rounded-lg p-6 sm:p-8" aria-label="Contact form" aria-busy={formState.status === "loading"}>
       <div className="grid gap-5 sm:grid-cols-2">
         <FloatingField label="Name" name="name" error={errors.name} onBlur={handleFieldBlur} onChange={handleFieldChange} />
         <FloatingField label="Email" name="email" type="email" error={errors.email} onBlur={handleFieldBlur} onChange={handleFieldChange} />
