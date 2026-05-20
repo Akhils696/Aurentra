@@ -26,7 +26,7 @@ export default function ContactPage() {
           <div className="max-w-4xl">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-aurora">Contact</p>
             <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-6xl">
-              Let’s map the fastest path from idea to working system.
+              Let&rsquo;s map the fastest path from idea to working system.
             </h1>
             <p className="mt-6 text-lg leading-8 text-white/68">
               Share what you are trying to automate, launch, or improve. We will respond with a practical next step.
