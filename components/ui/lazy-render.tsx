@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { motion, useReducedMotion } from "framer-motion";
+import { revealTransition } from "@/lib/motion";
 
 export function LazyRender({
   children,
@@ -15,6 +17,7 @@ export function LazyRender({
 }) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
     const node = ref.current;
@@ -36,7 +39,18 @@ export function LazyRender({
 
   return (
     <div ref={ref} className={className} style={visible ? undefined : { minHeight }}>
-      {visible ? children : <div aria-hidden className="performance-skeleton h-full min-h-[inherit] rounded-lg" />}
+      {visible ? (
+        <motion.div
+          initial={prefersReducedMotion ? false : { opacity: 0, y: 12, scale: 0.995 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={revealTransition}
+        >
+          {children}
+        </motion.div>
+      ) : (
+        <div aria-hidden className="performance-skeleton h-full min-h-[inherit] rounded-lg" />
+      )}
     </div>
   );
 }
+
