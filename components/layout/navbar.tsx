@@ -46,7 +46,7 @@ export function Navbar() {
               key={item.href}
               href={item.href}
               className={cn(
-                "hover-link relative rounded-md px-3 py-2 text-sm font-medium text-white/68 transition hover:text-white",
+                "hover-link relative rounded-md px-3 py-2 text-sm font-medium text-white/68 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#03050b]",
                 pathname === item.href && "text-white",
               )}
             >
@@ -70,7 +70,7 @@ export function Navbar() {
         </div>
 
         <div className="hidden lg:block">
-          <Button href="/contact" variant="secondary">Talk to us</Button>
+          <Button href="/contact" variant="secondary" className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2">Talk to us</Button>
         </div>
 
         <button
