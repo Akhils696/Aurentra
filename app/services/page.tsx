@@ -65,14 +65,17 @@ export default function ServicesPage() {
 
       <AnimatedSection className="pb-24 sm:pb-28">
         <Container>
-          <div className="rounded-lg border border-aurora/25 bg-aurora/10 p-8 sm:p-10">
-            <SectionHeading
-              eyebrow="Engagement Model"
-              title="Start with a clear audit, then build the highest-leverage system first"
-              copy="We can begin with a discovery sprint, define the roadmap, and ship the first release while your team sees progress every week."
-            />
-            <div className="mt-8">
-              <Button href="/contact">Discuss Your Requirements</Button>
+          <div className="poster-cta p-8 sm:p-10 lg:p-14">
+            <div className="relative max-w-4xl">
+              <SectionHeading
+                eyebrow="Engagement Model"
+                title="Start with a clear audit, then build the highest-leverage system first"
+                copy="We can begin with a discovery sprint, define the roadmap, and ship the first release while your team sees progress every week."
+              />
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <Button href="/contact">Discuss Your Requirements</Button>
+                <Button href="/about" variant="secondary">Learn about our process</Button>
+              </div>
             </div>
           </div>
         </Container>
