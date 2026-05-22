@@ -17,6 +17,7 @@ import { LazyRender } from "@/components/ui/lazy-render";
 import { SceneSection } from "@/components/ui/scene-section";
 import { SceneBridge } from "@/components/ui/scene-bridge";
 import { ProcessSection } from "@/components/home/process-section";
+import { CaseStudies } from "@/components/home/case-studies";
 import { projects, testimonials } from "@/lib/site-data";
 
 export default function Home() {
@@ -148,19 +149,10 @@ export default function Home() {
             />
           </div>
           <LazyRender className="mt-12" minHeight={560}>
-            <div className="grid gap-5 md:grid-cols-3">
-              {projects.map((project, index) => (
-                <ParallaxCard key={project.title} offset={10}>
-                  <div className={`ui-card ui-card-hover ${index === 0 ? "p-7" : "p-6"} ${index === 1 ? "md:mt-10" : ""} ${index === 2 ? "md:-mt-4 p-8" : ""}`}>
-                    {index === 2 ? <MobileMockup label={project.category} /> : <LaptopMockup title={project.title} meta={project.category} />}
-                    <p className="mt-6 rounded-md bg-white/6 p-4 text-sm font-medium text-white/72">{project.result}</p>
-                  </div>
-                </ParallaxCard>
-              ))}
-            </div>
+            <CaseStudies />
           </LazyRender>
-          <div className="mt-10">
-            <Button href="/about" variant="ghost">See our process</Button>
+          <div className="mt-12 flex justify-center">
+            <Button href="/about" variant="ghost">See our full process</Button>
           </div>
         </Container>
       </section>
