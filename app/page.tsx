@@ -58,7 +58,7 @@ export default function Home() {
       <SectionDivider />
       <SceneBridge />
 
-      <SceneSection className="ambient-section py-12 sm:py-16">
+      <SceneSection className="ambient-section py-20 sm:py-28">
         <Container>
           <p className="max-w-3xl text-xl font-medium leading-9 text-white/78 sm:text-2xl sm:leading-10">
             The work usually starts with one frustrating bottleneck: leads getting missed, teams copying data by hand, or a website that no longer reflects the business.
@@ -69,7 +69,7 @@ export default function Home() {
       <SectionDivider />
       <SceneBridge />
 
-      <SceneSection className="py-14 sm:py-16">
+      <SceneSection className="py-16 sm:py-24">
         <Container>
           <div className="poster-panel metal-edge">
             <TrustSignals />
@@ -80,7 +80,7 @@ export default function Home() {
       <SectionDivider />
       <SceneBridge />
 
-      <SceneSection className="ambient-section cinematic-red-glow py-16 sm:py-24" data-light="right">
+      <SceneSection className="ambient-section cinematic-red-glow py-20 sm:py-32" data-light="right">
         <Container>
           <div className="poster-panel metal-edge grid gap-12 lg:grid-cols-[0.42fr_0.58fr] lg:items-center">
             <SectionHeading
@@ -97,7 +97,7 @@ export default function Home() {
 
       <SectionDivider />
 
-      <section className="ambient-section cinematic-red-glow section-depth py-20 sm:py-28">
+      <section className="ambient-section cinematic-red-glow section-depth py-24 sm:py-32">
         <Container>
           <div className="poster-panel metal-edge">
             <p className="quiet-label mb-8 max-w-xl font-semibold">How we turn that into momentum</p>
@@ -120,7 +120,7 @@ export default function Home() {
 
       <SectionDivider />
 
-      <section className="ambient-section section-depth py-20 sm:py-28" data-light="left">
+      <section className="ambient-section section-depth py-24 sm:py-32" data-light="left">
         <Container>
           <div className="text-center mb-16">
             <SectionHeading
@@ -138,7 +138,7 @@ export default function Home() {
 
       <SectionDivider />
 
-      <section className="ambient-section section-depth py-24 sm:py-28" data-light="right">
+      <section className="ambient-section section-depth py-24 sm:py-32" data-light="right">
         <Container>
           <p className="quiet-label mb-8 ml-auto max-w-xl font-semibold">The result is not just a launch, but a calmer operating rhythm</p>
           <div className="ml-auto max-w-4xl">
@@ -159,7 +159,7 @@ export default function Home() {
 
       <SectionDivider />
 
-      <section className="py-24 sm:py-28">
+      <section className="py-28 sm:py-36">
         <Container>
           <SectionHeading eyebrow="Testimonials" title="Trusted by teams building their next chapter" />
           <div className="mt-12 grid gap-5 lg:grid-cols-[0.92fr_1.08fr_0.88fr]">
@@ -176,7 +176,7 @@ export default function Home() {
         </Container>
       </section>
 
-      <section className="cinematic-red-glow pb-24 pt-12 sm:pb-28">
+      <section className="cinematic-red-glow pb-36 pt-16 sm:pb-44">
         <Container>
           <div className="poster-cta p-8 sm:p-10 lg:p-14">
             <div className="relative max-w-4xl">
