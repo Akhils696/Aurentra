@@ -18,6 +18,7 @@ import { SceneSection } from "@/components/ui/scene-section";
 import { SceneBridge } from "@/components/ui/scene-bridge";
 import { ProcessSection } from "@/components/home/process-section";
 import { CaseStudies } from "@/components/home/case-studies";
+import { MetricsDisplay } from "@/components/home/metrics-display";
 import { projects, testimonials } from "@/lib/site-data";
 
 export default function Home() {
@@ -76,6 +77,25 @@ export default function Home() {
           </div>
         </Container>
       </SceneSection>
+
+      <SectionDivider />
+      <SceneBridge />
+
+      <section className="ambient-section section-depth py-20 sm:py-28" data-light="right">
+        <Container>
+          <div className="text-center mb-12">
+            <SectionHeading
+              eyebrow="Credibility"
+              title="Built for operational excellence"
+              copy="We design systems that run smoothly under pressure, backed by industry-standard SLAs and transparent engineering principles."
+              align="center"
+            />
+          </div>
+          <LazyRender minHeight={400}>
+            <MetricsDisplay />
+          </LazyRender>
+        </Container>
+      </section>
 
       <SectionDivider />
       <SceneBridge />
