@@ -16,6 +16,7 @@ import { LaptopMockup, MobileMockup } from "@/components/ui/device-mockups";
 import { LazyRender } from "@/components/ui/lazy-render";
 import { SceneSection } from "@/components/ui/scene-section";
 import { SceneBridge } from "@/components/ui/scene-bridge";
+import { ProcessSection } from "@/components/home/process-section";
 import { projects, testimonials } from "@/lib/site-data";
 
 export default function Home() {
@@ -113,6 +114,24 @@ export default function Home() {
               <PremiumServices />
             </LazyRender>
           </div>
+        </Container>
+      </section>
+
+      <SectionDivider />
+
+      <section className="ambient-section section-depth py-20 sm:py-28" data-light="left">
+        <Container>
+          <div className="text-center mb-16">
+            <SectionHeading
+              eyebrow="Workflow"
+              title="A predictable path to high-end systems"
+              copy="We don't believe in chaotic development loops. Our process is structured, rigorous, and designed to minimize risk while maximizing business momentum."
+              align="center"
+            />
+          </div>
+          <LazyRender minHeight={600}>
+            <ProcessSection />
+          </LazyRender>
         </Container>
       </section>
 
