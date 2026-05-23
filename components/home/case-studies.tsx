@@ -92,62 +92,83 @@ export function CaseStudies() {
                 study.accent
               )}>
                 {study.visualType === "scheduler" && (
-                  <div className="space-y-2">
-                    <div className="flex justify-between items-center bg-white/5 p-2 rounded border border-white/6">
-                      <span className="text-[10px] uppercase font-bold tracking-wider text-emerald-400 flex items-center gap-1">
-                        <Activity className="size-3" /> Live Dispatcher
+                  <div className="space-y-2.5 font-mono text-[9px]">
+                    <div className="flex justify-between items-center bg-white/[0.03] px-2.5 py-1.5 rounded border border-white/6 shadow-[0_1px_2px_rgba(0,0,0,0.15)]">
+                      <span className="text-[10px] uppercase font-bold tracking-wider text-emerald-400 flex items-center gap-1.5">
+                        <span className="size-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                        Live Dispatcher
                       </span>
-                      <span className="size-2 rounded-full bg-emerald-500 animate-pulse" />
+                      <span className="text-white/35">ACTIVE RUN</span>
                     </div>
-                    <div className="grid grid-cols-2 gap-2 text-[10px]">
-                      <div className="bg-[#050710] p-1.5 rounded border border-white/5">
-                        <span className="block text-white/40">Next Patient</span>
-                        <span className="font-bold text-white">#810-AR</span>
+                    <div className="rounded border border-white/5 bg-[#03050c]/90 p-2.5 space-y-2 relative overflow-hidden">
+                      <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.2) 1px, transparent 1px)", backgroundSize: "8px 8px" }} />
+                      <div className="flex justify-between items-center border-b border-white/5 pb-1.5 relative z-10">
+                        <span className="text-white/40">QUEUE LATENCY</span>
+                        <span className="font-bold text-emerald-400">0.03s (OPTIMAL)</span>
                       </div>
-                      <div className="bg-[#050710] p-1.5 rounded border border-white/5">
-                        <span className="block text-white/40">Queue Status</span>
-                        <span className="font-bold text-white">0% Wait</span>
+                      <div className="flex justify-between items-center relative z-10">
+                        <span className="text-white/40">NEXT APPOINTMENT</span>
+                        <span className="font-bold text-white">#810-AR (10:15)</span>
+                      </div>
+                      <div className="w-full bg-white/5 h-1 rounded-full overflow-hidden relative z-10">
+                        <div className="bg-emerald-500 h-full w-[82%]" />
                       </div>
                     </div>
                   </div>
                 )}
 
                 {study.visualType === "chart" && (
-                  <div className="space-y-2">
-                    <div className="flex justify-between items-center bg-white/5 p-2 rounded border border-white/6">
-                      <span className="text-[10px] uppercase font-bold tracking-wider text-blue-400 flex items-center gap-1">
-                        <RefreshCw className="size-3 animate-spin-slow" /> Real-time Sync
+                  <div className="space-y-2.5 font-mono text-[9px]">
+                    <div className="flex justify-between items-center bg-white/[0.03] px-2.5 py-1.5 rounded border border-white/6 shadow-[0_1px_2px_rgba(0,0,0,0.15)]">
+                      <span className="text-[10px] uppercase font-bold tracking-wider text-blue-400 flex items-center gap-1.5">
+                        <RefreshCw className="size-3 animate-spin-slow" />
+                        Throughput Engine
                       </span>
-                      <span className="text-[10px] text-white/40">24h History</span>
+                      <span className="text-white/35">24H CYCLE</span>
                     </div>
-                    <div className="flex items-end gap-1.5 h-12 justify-center pt-2">
-                      {[30, 45, 25, 60, 75, 50, 90, 85].map((h, i) => (
-                        <div 
-                          key={i} 
-                          className="w-full bg-blue-500/20 group-hover:bg-blue-500/40 rounded-t transition-all duration-300"
-                          style={{ height: `${h}%` }}
-                        />
-                      ))}
+                    <div className="rounded border border-white/5 bg-[#03050c]/90 p-2.5 h-16 flex flex-col justify-between relative overflow-hidden">
+                      <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.2) 1px, transparent 1px)", backgroundSize: "8px 8px" }} />
+                      <div className="flex items-end gap-1.5 h-10 justify-between relative z-10 pt-1.5">
+                        {[25, 48, 32, 68, 85, 42, 95, 78].map((h, i) => (
+                          <div 
+                            key={i} 
+                            className="w-full bg-blue-500/18 group-hover:bg-blue-500/35 rounded-t relative overflow-hidden transition-all duration-300"
+                            style={{ height: `${h}%` }}
+                          >
+                            {h > 60 && <div className="absolute top-0 inset-x-0 h-0.5 bg-blue-300" />}
+                          </div>
+                        ))}
+                      </div>
+                      <div className="flex justify-between text-[8px] text-white/35 relative z-10 pt-1 border-t border-white/5">
+                        <span>SYS_SYNC: OK</span>
+                        <span>LATENCY: &lt;200ms</span>
+                      </div>
                     </div>
                   </div>
                 )}
 
                 {study.visualType === "pipeline" && (
-                  <div className="space-y-2">
-                    <div className="flex justify-between items-center bg-white/5 p-2 rounded border border-white/6">
-                      <span className="text-[10px] uppercase font-bold tracking-wider text-red-400 flex items-center gap-1">
-                        <Shield className="size-3" /> Compliance Check
+                  <div className="space-y-2.5 font-mono text-[9px]">
+                    <div className="flex justify-between items-center bg-white/[0.03] px-2.5 py-1.5 rounded border border-white/6 shadow-[0_1px_2px_rgba(0,0,0,0.15)]">
+                      <span className="text-[10px] uppercase font-bold tracking-wider text-red-400 flex items-center gap-1.5">
+                        <Shield className="size-3 text-red-400" />
+                        Compliance Agent
                       </span>
-                      <span className="text-[10px] bg-red-500/20 text-red-400 px-1.5 py-0.5 rounded font-mono">STRICT</span>
+                      <span className="text-white/35">SECURE</span>
                     </div>
-                    <div className="space-y-1.5 text-[9px] font-mono bg-[#050710] p-2 rounded border border-white/5">
-                      <div className="flex justify-between">
-                        <span className="text-white/40">Speech Token:</span>
-                        <span className="text-white">VERIFIED</span>
+                    <div className="rounded border border-white/5 bg-[#03050c]/90 p-2.5 space-y-1.5 relative overflow-hidden">
+                      <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.2) 1px, transparent 1px)", backgroundSize: "8px 8px" }} />
+                      <div className="flex justify-between relative z-10">
+                        <span className="text-white/40">TRANSCRIPT STREAM:</span>
+                        <span className="text-white font-bold">VERIFIED_HASH</span>
                       </div>
-                      <div className="flex justify-between">
-                        <span className="text-white/40">Intent Match:</span>
-                        <span className="text-green-400">100% SECURE</span>
+                      <div className="flex justify-between relative z-10">
+                        <span className="text-white/40">REALTIME PARSE:</span>
+                        <span className="text-green-400 font-bold">100% COMPLIANT</span>
+                      </div>
+                      <div className="flex justify-between relative z-10 text-[8px] border-t border-white/5 pt-1.5 text-white/30">
+                        <span>INFERENCE: 14ms</span>
+                        <span>ERR: 0.00%</span>
                       </div>
                     </div>
                   </div>
