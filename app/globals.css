@@ -6,7 +6,7 @@
   color-scheme: dark;
   background: #03050b;
   --poster-ink: #03050b;
-  --poster-panel: rgba(8, 12, 22, 0.78);
+  --poster-panel: rgba(5, 8, 16, 0.88);
   --poster-red: #ef3d3d;
   --poster-blue: #101a2f;
 }
@@ -284,48 +284,48 @@ p {
 
 .glass {
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.025)),
-    rgba(21, 24, 33, 0.66);
-  border: 1px solid rgba(255, 255, 255, 0.075);
+    linear-gradient(145deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.01)),
+    rgba(5, 8, 16, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.055);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.08),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.025),
-    0 16px 52px rgba(0, 0, 0, 0.22),
-    0 1px 0 rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(20px) saturate(130%);
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.015),
+    0 24px 68px rgba(0, 0, 0, 0.46),
+    0 1px 0 rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(24px) saturate(135%);
 }
 
 .depth-card {
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.018)),
-    rgba(15, 18, 26, 0.64);
-  border: 1px solid rgba(255, 255, 255, 0.065);
+    linear-gradient(145deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.008)),
+    rgba(4, 7, 14, 0.76);
+  border: 1px solid rgba(255, 255, 255, 0.045);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.06),
-    0 12px 34px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(16px) saturate(120%);
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 20px 50px rgba(0, 0, 0, 0.38);
+  backdrop-filter: blur(20px) saturate(120%);
 }
 
 .ui-card {
   border-radius: 8px;
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.018) 42%, rgba(239, 61, 61, 0.035)),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.008) 50%, rgba(239, 61, 61, 0.015)),
     var(--poster-panel);
-  border: 1px solid rgba(216, 226, 255, 0.13);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.12),
-    inset 1px 0 0 rgba(255, 255, 255, 0.035),
-    inset 0 -20px 60px rgba(0, 0, 0, 0.22),
-    0 24px 70px rgba(0, 0, 0, 0.34);
-  backdrop-filter: blur(18px) saturate(128%);
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    inset 1px 0 0 rgba(255, 255, 255, 0.01),
+    inset 0 -20px 60px rgba(0, 0, 0, 0.35),
+    0 28px 80px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(22px) saturate(130%);
 }
 
 .ui-card-hover {
   transition:
-    transform 360ms cubic-bezier(0.22, 1, 0.36, 1),
-    border-color 360ms ease,
-    background 360ms ease,
-    box-shadow 360ms ease;
+    transform 380ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 380ms ease,
+    background 380ms ease,
+    box-shadow 380ms ease;
 }
 
 .ui-card-hover::before,
@@ -335,19 +335,19 @@ p {
   inset: 0;
   pointer-events: none;
   border-radius: inherit;
-  background: linear-gradient(105deg, transparent 20%, rgba(255, 255, 255, 0.13), transparent 48%);
+  background: linear-gradient(105deg, transparent 20%, rgba(255, 255, 255, 0.075), transparent 48%);
   opacity: 0;
   transform: translateX(-130%) skewX(-16deg);
-  animation: cinematic-reflection 11s ease-in-out infinite;
+  animation: cinematic-reflection 14s ease-in-out infinite;
 }
 
 .ui-card-hover:hover {
-  transform: translateY(-4px) scale(1.003);
-  border-color: rgba(255, 255, 255, 0.16);
+  transform: translateY(-2.5px);
+  border-color: rgba(255, 255, 255, 0.12);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.1),
-    inset 0 -20px 70px rgba(239, 61, 61, 0.035),
-    0 30px 90px rgba(0, 0, 0, 0.44);
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    inset 0 -20px 70px rgba(239, 61, 61, 0.02),
+    0 34px 100px rgba(0, 0, 0, 0.58);
 }
 
 .hover-link {
@@ -583,8 +583,8 @@ p {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.1) 42%, transparent 48%);
-  opacity: 0.28;
+  background: linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.045), transparent 48%);
+  opacity: 0.18;
 }
 
 .premium-feature-panel {
@@ -592,26 +592,26 @@ p {
   overflow: hidden;
   border-radius: 14px;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.018) 45%, rgba(239, 61, 61, 0.04)),
-    rgba(5, 9, 18, 0.74);
-  border: 1px solid rgba(216, 226, 255, 0.14);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.008) 45%, rgba(239, 61, 61, 0.015)),
+    rgba(5, 8, 16, 0.84);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.13),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.018),
-    0 34px 110px rgba(0, 0, 0, 0.38);
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.01),
+    0 34px 110px rgba(0, 0, 0, 0.55);
 }
 
 .poster-panel {
   position: relative;
   border-radius: 18px;
-  border: 1px solid rgba(216, 226, 255, 0.13);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.045), transparent 46%),
-    rgba(4, 8, 16, 0.56);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 46%),
+    rgba(4, 7, 14, 0.68);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.08),
-    inset 0 0 90px rgba(255, 255, 255, 0.018),
-    0 32px 120px rgba(0, 0, 0, 0.32);
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    inset 0 0 90px rgba(255, 255, 255, 0.01),
+    0 32px 120px rgba(0, 0, 0, 0.44);
   padding: clamp(1.25rem, 3vw, 2.5rem);
 }
 
@@ -626,7 +626,7 @@ p {
   pointer-events: none;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.04) 36%, rgba(239, 61, 61, 0.18) 68%, rgba(255, 255, 255, 0.12));
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.01) 36%, rgba(239, 61, 61, 0.08) 68%, rgba(255, 255, 255, 0.06));
   mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   mask-composite: exclude;
 }
