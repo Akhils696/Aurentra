@@ -36,7 +36,7 @@ export function Button({ href, children, variant = "primary", className, type = 
   }
 
   const classes = cn(
-    "motion-button button-sweep group relative inline-flex min-h-12 items-center justify-center overflow-hidden rounded-md px-5 py-3 text-center text-sm font-semibold transition-[transform,box-shadow,border-color,background] duration-500 ease-out hover:-translate-y-0.5 hover:scale-[1.015] focus:outline-none focus:ring-2 focus:ring-aurora focus:ring-offset-2 focus:ring-offset-ink active:scale-[0.985] sm:min-h-11",
+    "motion-button button-sweep premium-focus group relative inline-flex min-h-12 items-center justify-center overflow-hidden rounded-md px-5 py-3 text-center text-sm font-semibold transition-[transform,box-shadow,border-color,background] duration-500 ease-out hover:-translate-y-0.5 hover:scale-[1.015] active:scale-[0.985] sm:min-h-11",
     variant === "primary" && "border border-white/18 bg-[linear-gradient(135deg,#ffffff_0%,#fee2e2_46%,#fb7185_100%)] text-ink shadow-[inset_0_1px_0_rgba(255,255,255,0.7),0_18px_48px_rgba(239,68,68,0.22)] hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.85),0_22px_62px_rgba(239,68,68,0.32)]",
     variant === "secondary" && "border border-aurora/30 bg-white/[0.055] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_0_0_1px_rgba(255,255,255,0.025)] hover:border-aurora/70 hover:bg-aurora/12 hover:shadow-[0_0_34px_rgba(239,68,68,0.18)]",
     variant === "ghost" && "text-white/80 hover:bg-white/8 hover:text-white",
