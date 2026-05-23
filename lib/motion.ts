@@ -1,24 +1,24 @@
 export const motionTokens = {
-  ease: [0.22, 1, 0.36, 1] as const,
-  cinematic: [0.16, 1, 0.3, 1] as const,
-  press: [0.2, 0.8, 0.2, 1] as const,
+  ease: [0.16, 1, 0.3, 1] as const,
+  cinematic: [0.22, 1, 0.36, 1] as const,
+  press: [0.15, 0.85, 0.2, 1] as const,
   // Signature Aurentra triangular spring formula
   triangularSpring: {
     type: "spring" as const,
-    stiffness: 180,
-    damping: 20,
-    mass: 0.8,
+    stiffness: 240,
+    damping: 26,
+    mass: 0.75,
   },
   duration: {
-    fast: 0.24,
-    base: 0.46,
-    reveal: 0.72,
-    scene: 1.05,
+    fast: 0.22,
+    base: 0.42,
+    reveal: 0.68,
+    scene: 0.98,
   },
   stagger: {
-    tight: 0.06,
-    base: 0.11,
-    scene: 0.16,
+    tight: 0.05,
+    base: 0.10,
+    scene: 0.14,
   },
 };
 
@@ -29,9 +29,9 @@ export const revealTransition = {
 
 export const hoverSpring = {
   type: "spring" as const,
-  stiffness: 260,
-  damping: 24,
-  mass: 0.62,
+  stiffness: 280,
+  damping: 28,
+  mass: 0.55,
 };
 
 // Signature "Aurentra Motion" Directional Transitions
