@@ -26,29 +26,34 @@ export default function Home() {
     <>
       <HeroParallax>
         <Container className="grid items-center gap-12 sm:gap-16 lg:grid-cols-[0.92fr_1.08fr]">
-          <MotionReveal>
-            <div>
-              <p className="mb-5 inline-flex rounded-md border border-white/12 bg-white/[0.045] px-3 py-2 text-sm font-medium text-white/72">
+          <div>
+            <MotionReveal delay={0.10}>
+              <p className="mb-5 inline-flex rounded-md border border-white/8 bg-white/[0.035] px-3 py-2 text-xs font-semibold uppercase tracking-wider text-white/54">
                 Small team, practical systems, sharper growth
               </p>
-              <HeroTitle />
-              <p className="body-copy mt-6 max-w-2xl text-base sm:mt-7 sm:text-xl">
+            </MotionReveal>
+            
+            <HeroTitle />
+            
+            <MotionReveal delay={0.46}>
+              <p className="body-copy mt-6 max-w-2xl text-base sm:mt-7 sm:text-xl text-white/64 leading-relaxed">
                 We design AI-ready websites, apps, and automation systems that make your business look sharper, move faster, and convert more of the right opportunities.
               </p>
-              <MotionScaleIn delay={0.45}>
-                <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row">
-                  <Button href="/contact">
-                    Let&apos;s build something that works <ArrowRight aria-hidden className="ml-2 size-4" />
-                  </Button>
-                  <Button href="/services" variant="secondary">
-                    Explore capabilities
-                  </Button>
-                </div>
-              </MotionScaleIn>
-            </div>
-          </MotionReveal>
+            </MotionReveal>
+            
+            <MotionReveal delay={0.58}>
+              <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row">
+                <Button href="/contact">
+                  Let&apos;s build something that works <ArrowRight aria-hidden className="ml-2 size-4" />
+                </Button>
+                <Button href="/services" variant="secondary">
+                  Explore capabilities
+                </Button>
+              </div>
+            </MotionReveal>
+          </div>
 
-          <MotionReveal delay={0.12}>
+          <MotionReveal delay={0.72}>
             <div className="lg:translate-y-8">
               <HeroDeviceVisual />
             </div>
