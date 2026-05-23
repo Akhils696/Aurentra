@@ -26,8 +26,8 @@ export function SceneBridge() {
       />
 
       {/* Deep atmospheric backdrop blur fog */}
-      <div className="absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-[#03050b] to-transparent backdrop-blur-[1px]" />
-      <div className="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-[#03050b] to-transparent backdrop-blur-[1px]" />
+      <div className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-[#03050b] to-transparent backdrop-blur-[6px]" />
+      <div className="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-[#03050b] to-transparent backdrop-blur-[6px]" />
     </div>
   );
 }
